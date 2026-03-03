@@ -24,7 +24,7 @@ export function Initiatives() {
     <SectionWrapper id="initiatives" className="bg-[#f4f1e8] py-24 md:py-32">
       <div className="text-center mb-20">
         <h2 className="font-title text-center text-5xl md:text-6xl text-[#0969a7] mb-6 uppercase tracking-[0.028em] leading-tight">Nuestras Iniciativas</h2>
-        <p className="font-body text-xs sm:text-sm md:text-xl lg:text-2xl text-slate-900 max-w-full mx-auto font-normal whitespace-nowrap truncate px-4">
+        <p className="font-body text-lg md:text-xl lg:text-2xl text-slate-900 max-w-full mx-auto font-normal px-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst.
         </p>
       </div>
@@ -38,11 +38,11 @@ export function Initiatives() {
               </span>
             </div>
             <div className="px-12 pb-16 flex-grow flex flex-col">
-              <h3 className="font-title text-center text-3xl text-[#f4f1e8] mb-4 tracking-[0.028em] leading-tight">{initiative.title}</h3>
-              <p className="font-body text-base text-[#f4f1e8] flex-grow leading-relaxed font-normal">
+              <h3 className="font-title text-center text-xl text-[#f4f1e8] mb-4 tracking-[0.028em] leading-tight">{initiative.title}</h3>
+              <p className="font-body text-lg md:text-xl lg:text-2xl text-[#f4f1e8] flex-grow leading-relaxed font-normal">
                 {initiative.description}
               </p>
-              <div className="mt-6">
+              <div className="mt-auto pt-6">
                 <a href="#" className="font-body font-extrabold text-[#fdb725] hover:text-[#fff] transition-colors uppercase tracking-wider text-sm flex items-center">
                   Leer más
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>

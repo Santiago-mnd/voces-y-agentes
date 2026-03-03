@@ -10,7 +10,7 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="absolute top-0 w-full z-50 bg-transparent">
+    <nav className="sticky top-0 w-full z-50 bg-[#f4f1e8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center flex-shrink-0">
