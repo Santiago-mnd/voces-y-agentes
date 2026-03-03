@@ -5,6 +5,7 @@ import type { FormEvent } from 'react';
 export function Contact() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     // TODO: Connect to backend API
     console.log('Form submitted');
     alert('Gracias por tu mensaje. Nos pondremos en contacto pronto.');
