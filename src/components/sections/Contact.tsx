@@ -15,10 +15,10 @@ export function Contact() {
     <SectionWrapper id="contact" className="bg-transparent relative z-10 pt-24 pb-48 md:pt-32 md:pb-64 border-0">
       <div className="absolute inset-0 bg-[#fdb725] skew-y-2 transform origin-bottom-right -z-10"></div>
 
-      <div className="max-w-4xl mx-auto relative z-10 bg-[#f4f1e8] p-8 md:p-16 transform -skew-y-0">
+      <div className="max-w-4xl mx-auto relative z-10 bg-[#f4f1e8] p-12 md:p-24 transform -skew-y-0">
         <div className="text-center mb-12">
-          <h2 className="font-title text-5xl md:text-6xl text-[#ff7300] mb-6 uppercase tracking-wide leading-tight">Únete al Movimiento</h2>
-          <p className="font-body text-lg text-slate-900 font-normal max-w-2xl mx-auto">
+          <h2 className="font-title text-center text-5xl md:text-6xl text-[#ff7300] mb-6 uppercase tracking-[0.028em] leading-tight">Únete al Movimiento</h2>
+          <p className="font-body text-xs sm:text-sm md:text-xl lg:text-2xl text-slate-900 font-normal max-w-full mx-auto whitespace-nowrap truncate px-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel.
           </p>
         </div>

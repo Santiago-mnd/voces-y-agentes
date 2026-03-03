@@ -17,7 +17,7 @@ export function About() {
         </div>
 
         <div className="w-full lg:w-1/2 order-1 lg:order-2">
-          <h2 className="font-title text-5xl md:text-6xl text-[#1a8533] mb-8 uppercase tracking-wide leading-tight">Quiénes Somos</h2>
+          <h2 className="font-title text-center lg:text-left text-5xl md:text-6xl text-[#1a8533] mb-8 uppercase tracking-[0.028em] leading-tight">Quiénes Somos</h2>
           <div className="space-y-6 font-body text-lg md:text-xl text-slate-900 leading-relaxed font-normal">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

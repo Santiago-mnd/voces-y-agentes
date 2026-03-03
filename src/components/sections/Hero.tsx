@@ -1,14 +1,18 @@
 import faceLogo from '../../assets/face.svg';
+import deco1 from '../../assets/decorations/01.svg';
 import { Button } from '../ui/Button';
 
 export function Hero() {
   return (
     <section id="hero" className="relative bg-[#f4f1e8] min-h-[90vh] flex items-center overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32">
+      {/* Background Decoration */}
+      <img src={deco1} alt="" className="absolute -left-16 top-20 w-80 opacity-20 -z-10 -rotate-12 pointer-events-none" />
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
           <div className="max-w-3xl lg:w-1/2 flex flex-col justify-center">
-            <h1 className="font-title text-5xl md:text-6xl lg:text-[5rem] leading-normal tracking-wider mb-10">
+            <h1 className="font-title text-5xl md:text-6xl lg:text-[5rem] leading-[1.3] tracking-[0.028em] mb-10">
               <span className="block text-[#fdb725] mb-2">Damos Voz a los</span>
               <span className="block text-[#0969a7]">Agentes del Cambio</span>
             </h1>

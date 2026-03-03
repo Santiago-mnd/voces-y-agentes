@@ -2,13 +2,13 @@ import { SectionWrapper } from '../ui/SectionWrapper';
 
 export function Objective() {
   return (
-    <SectionWrapper id="objective" className="bg-transparent text-white border-0 py-24 md:py-32 relative z-10">
+    <SectionWrapper id="objective" className="bg-transparent text-white border-0 py-32 md:py-48 relative z-10">
       {/* Background diagonal */}
       <div className="absolute inset-0 bg-[#0969a7] -skew-y-3 transform origin-top-left -z-10"></div>
 
       <div className="max-w-5xl mx-auto text-center transform skew-y-0">
-        <h2 className="font-title text-5xl md:text-7xl text-[#fdb725] mb-12 uppercase tracking-wide leading-tight">Nuestro Objetivo</h2>
-        <p className="font-body text-xl md:text-3xl leading-tight mb-16 text-[#f4f1e8] font-normal">
+        <h2 className="font-title text-center text-5xl md:text-7xl text-[#fdb725] mb-12 uppercase tracking-[0.028em] leading-tight">Nuestro Objetivo</h2>
+        <p className="font-body text-xs sm:text-lg md:text-2xl lg:text-3xl leading-tight mb-16 text-[#f4f1e8] font-normal whitespace-nowrap truncate max-w-full px-4">
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim. Sed at eros nec diam consectetur suscipit. Aenean dapibus vulputate neque, ut fermentum risus."
         </p>
         <div className="w-32 h-6 bg-[#ff99af] mx-auto rotate-3"></div>
