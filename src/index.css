@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&display=swap');
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'TAN St. Canard';
+  src: url('./assets/fonts/tan_st._canard_regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@theme {
+  --color-crema: #f4f1e8;
+  --color-amarillo: #fdb725;
+  --color-naranja: #ff7300;
+  --color-verde: #13853c;
+  --color-azul: #0969a7;
+  --color-rosa: #fd77b4;
+
+  --font-title: "TAN St. Canard", sans-serif;
+  --font-body: "Nunito Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-body bg-crema text-slate-800 antialiased;
+}
