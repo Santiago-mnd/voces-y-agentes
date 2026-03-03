@@ -17,7 +17,7 @@ export function Contact() {
 
       <div className="max-w-4xl mx-auto relative z-10 bg-[#f4f1e8] p-12 md:p-24 transform -skew-y-0">
         <div className="text-center mb-12">
-          <h2 className="font-title text-center text-5xl md:text-6xl text-[#ff7300] mb-6 uppercase tracking-[0.028em] leading-tight">Únete al Movimiento</h2>
+          <h2 className="font-title text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#ff7300] mb-8 uppercase tracking-[0.028em] leading-tight md:leading-[1.3] break-words hyphens-auto">Únete al Movimiento</h2>
           <p className="font-body text-xs sm:text-sm md:text-xl lg:text-2xl text-slate-900 font-normal max-w-full mx-auto whitespace-nowrap truncate px-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel.
           </p>
