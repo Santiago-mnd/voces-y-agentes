@@ -13,13 +13,12 @@ export function Contact() {
 
   return (
     <SectionWrapper id="contact" className="bg-transparent relative z-10 pt-24 pb-48 md:pt-32 md:pb-64 border-0">
-      {/* Background diagonal */}
-      <div className="absolute inset-0 bg-[#fceb54] skew-y-2 transform origin-bottom-right -z-10"></div>
+      <div className="absolute inset-0 bg-[#fdb725] skew-y-2 transform origin-bottom-right -z-10"></div>
 
       <div className="max-w-4xl mx-auto relative z-10 bg-[#f4f1e8] p-8 md:p-16 transform -skew-y-0">
         <div className="text-center mb-12">
           <h2 className="font-title text-5xl md:text-6xl text-[#ff7300] mb-6 uppercase tracking-wide leading-tight">Únete al Movimiento</h2>
-          <p className="font-body text-xl text-slate-900 font-normal max-w-2xl mx-auto">
+          <p className="font-body text-lg text-slate-900 font-normal max-w-2xl mx-auto">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel.
           </p>
         </div>

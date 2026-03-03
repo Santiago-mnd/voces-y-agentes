@@ -24,7 +24,7 @@ export function Initiatives() {
     <SectionWrapper id="initiatives" className="bg-[#f4f1e8] py-24 md:py-32">
       <div className="text-center mb-20">
         <h2 className="font-title text-5xl md:text-6xl text-[#0969a7] mb-6 uppercase tracking-wide leading-tight">Nuestras Iniciativas</h2>
-        <p className="font-body text-xl md:text-2xl text-slate-900 max-w-3xl mx-auto font-normal">
+        <p className="font-body text-lg md:text-xl text-slate-900 max-w-3xl mx-auto font-normal">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst.
         </p>
       </div>
@@ -39,7 +39,7 @@ export function Initiatives() {
             </div>
             <div className="px-10 pb-12 flex-grow flex flex-col">
               <h3 className="font-title text-3xl text-[#f4f1e8] mb-4 tracking-wide leading-tight">{initiative.title}</h3>
-              <p className="font-body text-lg text-[#f4f1e8] flex-grow leading-relaxed font-normal">
+              <p className="font-body text-base text-[#f4f1e8] flex-grow leading-relaxed font-normal">
                 {initiative.description}
               </p>
               <div className="mt-6">

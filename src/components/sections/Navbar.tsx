@@ -36,7 +36,7 @@ export function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="font-title text-xl font-bold text-slate-900 hover:text-[#ff7300] hover:underline decoration-4 underline-offset-8 decoration-[#0969a7] transition-all uppercase tracking-widest leading-none"
+                className="font-title text-xl font-bold text-gray-700 hover:text-[#ff7300] hover:underline decoration-4 underline-offset-8 decoration-[#0969a7] transition-all uppercase tracking-widest leading-none"
               >
                 {link.name}
               </a>

@@ -8,11 +8,11 @@ export function Hero() {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
           <div className="max-w-3xl lg:w-1/2 flex flex-col justify-center">
-            <h1 className="font-title text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.9] tracking-wide mb-10">
-              <span className="block text-[#0969a7] mb-2">Damos Voz a los</span>
-              <span className="block text-[#ff7300]">Agentes del Cambio</span>
+            <h1 className="font-title text-5xl md:text-6xl lg:text-[5rem] leading-normal tracking-wider mb-10">
+              <span className="block text-[#fdb725] mb-2">Damos Voz a los</span>
+              <span className="block text-[#0969a7]">Agentes del Cambio</span>
             </h1>
-            <p className="font-body text-xl md:text-2xl text-slate-900 mb-12 max-w-md lg:max-w-lg leading-relaxed font-normal">
+            <p className="font-body text-lg md:text-xl text-slate-900 mb-12 max-w-md lg:max-w-lg leading-relaxed font-normal">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.
             </p>
             <div className="flex flex-col sm:flex-row gap-8">
