@@ -1,6 +1,6 @@
 import faceLogo from '../../assets/face.svg';
 import deco1 from '../../assets/decorations/01.svg';
-import deco2 from '../../assets/decorations/02.svg';
+// import deco2 from '../../assets/decorations/02.svg';
 import { Button } from '../ui/Button';
 import { InteractiveDecoration } from '../ui/InteractiveDecoration';
 
