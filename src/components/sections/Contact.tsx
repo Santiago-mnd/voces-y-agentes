@@ -1,6 +1,8 @@
 import { SectionWrapper } from '../ui/SectionWrapper';
 import { Button } from '../ui/Button';
 import type { FormEvent } from 'react';
+import deco1 from '../../assets/decorations/01.svg';
+import { InteractiveDecoration } from '../ui/InteractiveDecoration';
 
 export function Contact() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -12,8 +14,10 @@ export function Contact() {
   };
 
   return (
-    <SectionWrapper id="contact" className="bg-transparent relative z-10 pt-24 pb-48 md:pt-32 md:pb-64 border-0">
+    <SectionWrapper id="contact" className="relative overflow-hidden bg-transparent z-10 pt-24 pb-48 md:pt-32 md:pb-64 border-0">
       <div className="absolute inset-0 bg-[#fdb725] skew-y-2 transform origin-bottom-right -z-10"></div>
+
+      <InteractiveDecoration src={deco1} alt="" className="absolute left-5 bottom-5 w-24 md:w-32 opacity-70 z-0 rotate-90" />
 
       <div className="max-w-4xl mx-auto relative z-10 bg-[#f4f1e8] p-12 md:p-24 transform -skew-y-0">
         <div className="text-center mb-12">

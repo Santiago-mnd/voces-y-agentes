@@ -1,10 +1,13 @@
 import { SectionWrapper } from '../ui/SectionWrapper';
 import faceLogo from '../../assets/face.svg';
+import deco2 from '../../assets/decorations/02.svg';
+import { InteractiveDecoration } from '../ui/InteractiveDecoration';
 
 export function About() {
   return (
-    <SectionWrapper id="about" className="bg-[#f4f1e8] py-24 md:py-32">
-      <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+    <SectionWrapper id="about" className="relative overflow-hidden bg-[#f4f1e8] py-24 md:py-32">
+      <InteractiveDecoration src={deco2} alt="" className="absolute right-5 top-10 w-24 md:w-32 opacity-50 z-0 rotate-12" />
+      <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
         <div className="w-full lg:w-1/2 order-2 lg:order-1">
           <div className="aspect-square max-w-md mx-auto relative overflow-hidden bg-[#ff99af] flex items-center justify-center -rotate-2 hover:rotate-0 transition-transform duration-300">
             {/* Image Placeholder */}

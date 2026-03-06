@@ -1,12 +1,15 @@
 import faceLogo from '../../assets/face.svg';
 import deco1 from '../../assets/decorations/01.svg';
+import deco2 from '../../assets/decorations/02.svg';
 import { Button } from '../ui/Button';
+import { InteractiveDecoration } from '../ui/InteractiveDecoration';
 
 export function Hero() {
   return (
     <section id="hero" className="relative bg-[#f4f1e8] min-h-[90vh] flex items-center overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32">
       {/* Background Decoration */}
-      <img src={deco1} alt="" className="absolute -left-16 top-20 w-80 opacity-20 -z-10 -rotate-12 pointer-events-none" />
+      <InteractiveDecoration src={deco1} alt="" className="absolute -left-16 top-20 w-80 opacity-40 z-0 -rotate-12" />
+      {/* <InteractiveDecoration src={deco2} alt="" className="absolute -bottom-10 -right-10 w-32 md:w-40 opacity-50 z-0 rotate-45" /> */}
 
       <div className="w-full relative z-10 py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
