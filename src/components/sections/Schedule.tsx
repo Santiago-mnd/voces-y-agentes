@@ -16,7 +16,7 @@ export function Schedule() {
       id="calendario"
       className="bg-crema mt-14 md:mt-20"
       diagonal="right"
-      diagonalColor="#ffffff"
+      diagonalColor="#f4f1e8"
       fullWidth
       paddingClass="py-16 md:py-24"
     >
@@ -42,7 +42,7 @@ export function Schedule() {
             </div>
           ))}
         </div>
-        <a href="#contact" data-placeholder="calendario-pdf" className="block">
+        <a href="#registro" data-placeholder="calendario-pdf" className="block">
           <Button variant="secondary" fullWidth>
             Descargar calendario (próximamente)
           </Button>

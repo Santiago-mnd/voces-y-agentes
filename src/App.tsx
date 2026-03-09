@@ -5,7 +5,8 @@ import { Objective } from './components/sections/Objective';
 import { Participation } from './components/sections/Participation';
 // import { Initiatives } from './components/sections/Initiatives';
 import { Schedule } from './components/sections/Schedule';
-import { Contact } from './components/sections/Contact';
+import { Registration } from './components/sections/Registration';
+import { Supporters } from './components/sections/Supporters';
 import { FAQ } from './components/sections/FAQ';
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
         <Participation />
         {/* <Initiatives /> */}
         <Schedule />
-        <Contact />
+        <Registration />
+        <Supporters />
         <FAQ />
       </main>
       <footer className="bg-slate-900 py-8 text-center text-slate-400 font-body border-t-4 border-naranja">

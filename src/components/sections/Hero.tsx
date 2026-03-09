@@ -1,4 +1,4 @@
-import faceLogo from '../../assets/face.svg';
+﻿import faceLogo from '../../assets/face.svg';
 import deco1 from '../../assets/decorations/01.svg';
 // import deco2 from '../../assets/decorations/02.svg';
 import { Button } from '../ui/Button';
@@ -23,11 +23,11 @@ export function Hero() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start mt-6">
-              <a href="#initiatives" className="w-full sm:w-auto">
-                <Button variant="primary" fullWidth className="sm:w-auto">Ver Iniciativas</Button>
+              <a href="#calendario" className="w-full sm:w-auto">
+                <Button variant="primary" fullWidth className="sm:w-auto">Ver calendario</Button>
               </a>
-              <a href="#contact" className="w-full sm:w-auto">
-                <Button variant="secondary" fullWidth className="sm:w-auto">Únete a Nosotros</Button>
+              <a href="#registro" className="w-full sm:w-auto">
+                <Button variant="secondary" fullWidth className="sm:w-auto">Únete al registro</Button>
               </a>
             </div>
           </div>

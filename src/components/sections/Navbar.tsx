@@ -1,4 +1,4 @@
-import vyaText from '../../assets/vya.svg';
+﻿import vyaText from '../../assets/vya.svg';
 
 export function Navbar() {
   const links = [
@@ -6,7 +6,7 @@ export function Navbar() {
     { name: 'Quiénes somos', href: '#about' },
     { name: 'Nuestro objetivo', href: '#objective' },
     { name: 'Iniciativas', href: '#initiatives' },
-    { name: 'Únete', href: '#contact' },
+    { name: 'Únete', href: '#registro' },
   ];
 
   return (
