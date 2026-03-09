@@ -1,21 +1,41 @@
-import type { ReactNode } from 'react';
+﻿import type { CSSProperties, ReactNode } from 'react';
+
+type DiagonalStyle = CSSProperties & {
+  '--diagonal-color'?: string;
+};
 
 interface SectionWrapperProps {
   id: string;
   children: ReactNode;
   className?: string;
   containerClassName?: string;
+  diagonal?: 'left' | 'right';
+  diagonalColor?: string;
+  fullWidth?: boolean;
+  paddingClass?: string;
 }
 
 export function SectionWrapper({
   id,
   children,
   className = '',
-  containerClassName = ''
+  containerClassName = '',
+  diagonal,
+  diagonalColor = '#ffffff',
+  fullWidth = false,
+  paddingClass = 'py-16 md:py-24'
 }: SectionWrapperProps) {
+  const diagonalClasses = diagonal ? `section-diagonal section-diagonal-${diagonal}` : '';
+  const sectionClasses = `${diagonal ? 'relative' : ''} ${paddingClass} ${diagonalClasses} ${className}`;
+  const diagonalStyle: DiagonalStyle | undefined = diagonal ? { '--diagonal-color': diagonalColor } : undefined;
+
   return (
-    <section id={id} className={`py-16 md:py-24 ${className}`}>
-      <div className={`container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl ${containerClassName}`}>
+    <section id={id} className={sectionClasses} style={diagonalStyle}>
+      <div
+        className={`relative ${diagonal ? 'z-10' : ''} ${
+          fullWidth ? '' : 'container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl'
+        } ${containerClassName}`}
+      >
         {children}
       </div>
     </section>

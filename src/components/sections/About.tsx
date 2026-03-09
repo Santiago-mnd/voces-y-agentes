@@ -1,7 +1,14 @@
-import { SectionWrapper } from '../ui/SectionWrapper';
+﻿import { SectionWrapper } from '../ui/SectionWrapper';
 import faceLogo from '../../assets/face.svg';
 import deco2 from '../../assets/decorations/02.svg';
 import { InteractiveDecoration } from '../ui/InteractiveDecoration';
+
+const PILLARS = [
+  'Participación Juvenil Significativa: Tu voz es el motor, no un requisito.',
+  'Cuidado Colectivo: Movemos cada proceso desde la empatía y la salud mental comunitaria.',
+  'Aprender Haciendo: Teoría y práctica van juntas, siempre en territorio.',
+  'Incidencia Real: Buscamos cambios que se sientan en la calle y en las políticas públicas.'
+];
 
 export function About() {
   return (
@@ -10,24 +17,37 @@ export function About() {
       <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
         <div className="w-full lg:w-1/2 order-2 lg:order-1">
           <div className="aspect-square max-w-md mx-auto relative overflow-hidden bg-[#ff99af] flex items-center justify-center -rotate-2 hover:rotate-0 transition-transform duration-300">
-            {/* Image Placeholder */}
             <div className="text-slate-900 font-title text-4xl uppercase tracking-widest leading-tight z-10 relative text-center px-4">
               Imagen del Equipo
             </div>
-            {/* Decorative logo */}
             <img src={faceLogo} alt="" className="absolute -bottom-16 -right-16 w-64 h-64 opacity-50 rotate-12" />
+            <div className="absolute top-6 left-6 bg-[#f4f1e8]/90 text-[#0969a7] font-title uppercase tracking-[0.3em] text-xs px-4 py-2 shadow-lg rotate-2">
+              Laboratorio VyA
+            </div>
           </div>
         </div>
 
         <div className="w-full lg:w-1/2 order-1 lg:order-2">
-          <h2 className="font-title text-center lg:text-left text-5xl md:text-6xl text-[#1a8533] mb-8 uppercase tracking-[0.028em] leading-tight">Quiénes Somos</h2>
+          <h2 className="font-title text-center lg:text-left text-5xl md:text-6xl text-[#1a8533] mb-8 uppercase tracking-[0.028em] leading-tight">¿Quiénes Somos?</h2>
           <div className="space-y-6 font-body text-lg md:text-xl text-slate-900 leading-relaxed font-normal">
+            <p className="text-[#0f172a] font-semibold uppercase tracking-[0.3em] text-sm">De la intención a la acción</p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Somos Voces y Agentes (VyA), un Laboratorio de Incidencia y Acción Juvenil nacido en el Valle de México. Impulsamos a juventudes de Iztapalapa, Cuauhtémoc y Ecatepec para que pasen del activismo de base a la incidencia política estratégica.
             </p>
             <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Creemos que las Juventudes Oportunidad conocen mejor sus territorios. Les damos herramientas técnicas, acompañamiento psicosocial y capital semilla para que diseñen soluciones reales sobre trabajo digno, cultura de paz y derechos humanos.
             </p>
+            <div className="bg-white/80 border-l-4 border-[#0969a7] p-6 space-y-4">
+              <h3 className="font-title text-2xl text-[#0969a7] tracking-[0.2em] uppercase">Nuestros pilares</h3>
+              <ul className="space-y-3">
+                {PILLARS.map((pillar) => (
+                  <li key={pillar} className="flex items-start gap-3">
+                    <span className="mt-1 w-2 h-2 rounded-full bg-[#ff7300]" aria-hidden />
+                    <span>{pillar}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

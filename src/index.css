@@ -27,3 +27,106 @@ html {
 body {
   @apply font-body bg-crema text-slate-800 antialiased;
 }
+.section-diagonal {
+  position: relative;
+  isolation: isolate;
+}
+
+.section-diagonal::before {
+  content: '';
+  position: absolute;
+  inset: -2% 0;
+  background: var(--diagonal-color, #ffffff);
+  z-index: -1;
+}
+
+.section-diagonal-left::before {
+  transform: skewY(-2deg) scale(1.01);
+  transform-origin: top left;
+}
+
+.section-diagonal-right::before {
+  transform: skewY(2deg) scale(1.01);
+  transform-origin: top right;
+}
+
+.heading-balanced {
+  text-wrap: balance;
+}
+
+@supports not (text-wrap: balance) {
+  .heading-balanced {
+    hyphens: auto;
+  }
+}
+
+.cycle-card {
+  position: relative;
+  isolation: isolate;
+  transition:
+    transform 350ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 350ms ease,
+    filter 350ms ease;
+  box-shadow: 0 25px 35px -30px rgba(15, 23, 42, 0.7);
+  transform-origin: center;
+  will-change: transform;
+  --cycle-tilt: 0deg;
+}
+
+.cycle-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  opacity: 0;
+  transform: translateY(18px) scale(0.95);
+  transition:
+    opacity 350ms ease,
+    transform 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 1;
+}
+
+.cycle-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.cycle-card:hover,
+.cycle-card:focus-within {
+  transform: translateY(-6px) scale(1.01) rotate(var(--cycle-tilt));
+  box-shadow: 0 35px 60px -30px rgba(15, 23, 42, 0.8);
+  filter: brightness(1.02);
+}
+
+.cycle-card:hover::after,
+.cycle-card:focus-within::after {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.cycle-card--tilt-left {
+  --cycle-tilt: -1deg;
+}
+
+.cycle-card--tilt-right {
+  --cycle-tilt: 1deg;
+}
+
+@media (max-width: 768px) {
+  .cycle-card:hover,
+  .cycle-card:focus-within {
+    transform: translateY(-2px) scale(1.005);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cycle-card,
+  .cycle-card::after {
+    transition: none;
+  }
+
+  .cycle-card:hover,
+  .cycle-card:focus-within {
+    transform: none;
+  }
+}
