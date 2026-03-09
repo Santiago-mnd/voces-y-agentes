@@ -47,9 +47,6 @@ export function Schedule() {
             Descargar calendario (próximamente)
           </Button>
         </a>
-        <p className="text-sm text-slate-500 text-center">
-          Cuando tengas el PDF definitivo, reemplaza el enlace de este botón y listo.
-        </p>
       </div>
     </SectionWrapper>
   );
