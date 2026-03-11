@@ -1,4 +1,5 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
+import { usePostHog } from '@posthog/react';
 import { SectionWrapper } from '../ui/SectionWrapper';
 import { InteractiveDecoration } from '../ui/InteractiveDecoration';
 import deco1 from '../../assets/decorations/01.svg';
@@ -41,6 +42,7 @@ interface FAQItemProps {
 }
 
 function FAQItem({ question, answer, index }: FAQItemProps) {
+  const posthog = usePostHog();
   const [open, setOpen] = useState(false);
   const contentId = `faq-panel-${index}`;
 
@@ -48,7 +50,10 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
     <div className="bg-white shadow-sm border border-slate-200">
       <button
         type="button"
-        onClick={() => setOpen((prev) => !prev)}
+        onClick={() => setOpen((prev) => {
+          if (!prev) posthog.capture('faq_opened', { question });
+          return !prev;
+        })}
         className="w-full flex items-center justify-between gap-4 px-6 py-4 text-left cursor-pointer"
         aria-expanded={open}
         aria-controls={contentId}

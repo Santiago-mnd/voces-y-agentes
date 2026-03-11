@@ -10,5 +10,9 @@
   },
   "compatibility_flags": [
     "nodejs_compat"
-  ]
+  ],
+  "vars": {
+    "VITE_PUBLIC_POSTHOG_KEY": "phc_v3kAFysb74Pg4OAvkDUQ01qgy3dIe54DEJEtCPFLh5V",
+   "VITE_PUBLIC_POSTHOG_HOST": "https://us.i.posthog.com"
+  }
 }

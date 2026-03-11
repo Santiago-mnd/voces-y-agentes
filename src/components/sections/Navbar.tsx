@@ -1,6 +1,8 @@
-﻿import vyaText from '../../assets/vya.svg';
+import { usePostHog } from '@posthog/react';
+import vyaText from '../../assets/vya.svg';
 
 export function Navbar() {
+  const posthog = usePostHog();
   const links = [
     { name: 'Inicio', href: '#hero' },
     { name: 'Quiénes somos', href: '#about' },
@@ -36,6 +38,7 @@ export function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
+                onClick={() => posthog.capture('navbar_click', { section: link.name, destination: link.href })}
                 className="font-title text-xl font-bold text-gray-700 hover:text-[#ff7300] hover:underline decoration-4 underline-offset-8 decoration-[#0969a7] transition-all uppercase tracking-widest leading-none"
               >
                 {link.name}

@@ -1,4 +1,5 @@
-﻿import { SectionWrapper } from '../ui/SectionWrapper';
+import { usePostHog } from '@posthog/react';
+import { SectionWrapper } from '../ui/SectionWrapper';
 import { Button } from '../ui/Button';
 import { InteractiveDecoration } from '../ui/InteractiveDecoration';
 import deco1 from '../../assets/decorations/01.svg';
@@ -18,6 +19,7 @@ const reminders = [
 ];
 
 export function Registration() {
+  const posthog = usePostHog();
   return (
     <SectionWrapper
       id="registro"
@@ -67,7 +69,12 @@ export function Registration() {
         </div>
 
         <div className="text-center space-y-3">
-          <a href={registrationLink} target="_blank" rel="noopener noreferrer">
+          <a
+            href={registrationLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => posthog.capture('click_registro_oficial')}
+          >
             <Button className="w-full md:w-auto px-16 py-5 bg-[#1a8533] hover:brightness-110 text-white text-xl font-extrabold uppercase tracking-widest transition-all">
               Ir al formulario oficial
             </Button>

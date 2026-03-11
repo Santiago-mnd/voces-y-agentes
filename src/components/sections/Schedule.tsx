@@ -1,4 +1,5 @@
-﻿import { SectionWrapper } from '../ui/SectionWrapper';
+import { usePostHog } from '@posthog/react';
+import { SectionWrapper } from '../ui/SectionWrapper';
 import { Button } from '../ui/Button';
 import { InteractiveDecoration } from '../ui/InteractiveDecoration';
 import deco4 from '../../assets/decorations/04.svg';
@@ -11,6 +12,7 @@ const timeline = [
 ];
 
 export function Schedule() {
+  const posthog = usePostHog();
   return (
     <SectionWrapper
       id="calendario"
@@ -42,7 +44,12 @@ export function Schedule() {
             </div>
           ))}
         </div>
-        <a href="#registro" data-placeholder="calendario-pdf" className="block">
+        <a
+          href="#registro"
+          data-placeholder="calendario-pdf"
+          className="block"
+          onClick={() => posthog.capture('descarga_calendario_intent')}
+        >
           <Button variant="secondary" fullWidth>
             Descargar calendario (próximamente)
           </Button>
