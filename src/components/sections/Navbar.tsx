@@ -1,4 +1,4 @@
-import { usePostHog } from '@posthog/react';
+﻿import { usePostHog } from '@posthog/react';
 import vyaText from '../../assets/vya.svg';
 
 export function Navbar() {
@@ -12,13 +12,13 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 w-full z-50 bg-[#f4f1e8]">
+    <nav className="sticky top-0 w-full z-50 bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center flex-shrink-0">
             <a href="#hero" className="flex items-center gap-3 group">
               <div
-                className="h-10 w-48 bg-[#0969a7] transition-transform group-hover:-rotate-2 group-hover:scale-105"
+                className="h-10 w-48 bg-secondary transition-transform group-hover:-rotate-2 group-hover:scale-105"
                 style={{
                   WebkitMaskImage: `url(${vyaText})`,
                   WebkitMaskRepeat: 'no-repeat',
@@ -39,7 +39,7 @@ export function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => posthog.capture('navbar_click', { section: link.name, destination: link.href })}
-                className="font-title text-xl font-bold text-gray-700 hover:text-[#ff7300] hover:underline decoration-4 underline-offset-8 decoration-[#0969a7] transition-all uppercase tracking-widest leading-none"
+                className="font-heading text-xl font-bold text-neutral hover:text-primary hover:underline decoration-4 underline-offset-8 decoration-secondary transition-all uppercase tracking-widest leading-none"
               >
                 {link.name}
               </a>

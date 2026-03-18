@@ -24,8 +24,20 @@ function App() {
         <Supporters />
         <FAQ />
       </main>
-      <footer className="bg-slate-900 py-8 text-center text-slate-400 font-body border-t-4 border-naranja">
-        <p>&copy; {new Date().getFullYear()} Voces y Agentes. Lorem ipsum dolor sit.</p>
+      <footer className="bg-slate-900 py-8 text-center text-surface font-body border-t-4 border-primary space-y-2">
+        <p className=" text-surface">&copy; {new Date().getFullYear()} Voces y Agentes.</p>
+        <p className="text-sm text-surface">
+          Este micrositio alojado en goynmexico.org se apega al{' '}
+          <a
+            href="https://youthbuildmexico.org/aviso-de-privacidad/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary-soft underline decoration-2 decoration-primary-soft"
+          >
+            aviso de privacidad de GOYN
+          </a>
+          .
+        </p>
       </footer>
     </div>
   );

@@ -9,14 +9,16 @@
   font-display: swap;
 }
 @theme {
-  --color-crema: #f4f1e8;
-  --color-amarillo: #fdb725;
-  --color-naranja: #ff7300;
-  --color-verde: #13853c;
-  --color-azul: #0969a7;
-  --color-rosa: #fd77b4;
+  --color-surface: #f4f1e8;
+  --color-primary: #ff7300;
+  --color-primary-soft: #fdb725;
+  --color-secondary: #0969a7;
+  --color-success: #13853c;
+  --color-accent: #fd77b4;
+  --color-deep: #0f172a;
+  --color-neutral: #545454;
 
-  --font-title: "TAN St. Canard", sans-serif;
+  --font-heading: "TAN St. Canard", sans-serif;
   --font-body: "Nunito Sans", sans-serif;
 }
 
@@ -25,7 +27,7 @@ html {
 }
 
 body {
-  @apply font-body bg-crema text-slate-800 antialiased;
+  @apply font-body bg-surface text-neutral antialiased;
 }
 .section-diagonal {
   position: relative;

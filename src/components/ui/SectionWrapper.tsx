@@ -21,7 +21,7 @@ export function SectionWrapper({
   className = '',
   containerClassName = '',
   diagonal,
-  diagonalColor = '#ffffff',
+  diagonalColor = 'var(--color-surface)',
   fullWidth = false,
   paddingClass = 'py-16 md:py-24'
 }: SectionWrapperProps) {

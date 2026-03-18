@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { usePostHog } from '@posthog/react';
 import { SectionWrapper } from '../ui/SectionWrapper';
 import { InteractiveDecoration } from '../ui/InteractiveDecoration';
@@ -47,7 +47,7 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
   const contentId = `faq-panel-${index}`;
 
   return (
-    <div className="bg-white shadow-sm border border-slate-200">
+    <div className="bg-surface shadow-sm border border-neutral/30">
       <button
         type="button"
         onClick={() => setOpen((prev) => {
@@ -58,9 +58,9 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
         aria-expanded={open}
         aria-controls={contentId}
       >
-        <span className="font-title text-xl text-azul">{question}</span>
+        <span className="font-heading text-xl text-secondary">{question}</span>
         <span
-          className={`font-title text-3xl text-azul transition-transform duration-300 ease-out ${open ? 'rotate-45' : ''}`}
+          className={`font-heading text-3xl text-secondary transition-transform duration-300 ease-out ${open ? 'rotate-45' : ''}`}
           aria-hidden
         >
           +
@@ -70,7 +70,7 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
         id={contentId}
         className={`px-6 pr-10 ${open ? 'max-h-125 opacity-100 pb-6' : 'max-h-0 opacity-0'} transition-all duration-500 ease-out overflow-hidden`}
       >
-        <p className="font-body text-base md:text-lg text-slate-800">{answer}</p>
+        <p className="font-body text-base md:text-lg text-neutral">{answer}</p>
       </div>
     </div>
   );
@@ -78,10 +78,10 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
 
 export function FAQ() {
   return (
-    <SectionWrapper id="faq" className="relative overflow-hidden bg-crema py-24 md:py-32">
+    <SectionWrapper id="faq" className="relative overflow-hidden bg-surface py-24 md:py-32">
       <InteractiveDecoration src={deco1} alt="" className="absolute left-4 -top-6 w-24 md:w-40 opacity-30" />
       <div className="relative z-10 max-w-5xl mx-auto space-y-8">
-        <h2 className="font-title text-4xl md:text-5xl text-slate-900 leading-tight text-center">
+        <h2 className="font-heading text-4xl md:text-5xl text-neutral leading-tight text-center">
           Preguntas frecuentes
         </h2>
         <div className="space-y-4">
