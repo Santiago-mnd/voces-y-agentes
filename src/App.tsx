@@ -24,7 +24,7 @@ function App() {
         <Supporters />
         <FAQ />
       </main>
-      <footer className="bg-slate-900 py-8 text-center text-surface font-body border-t-4 border-primary space-y-2">
+      <footer className="bg-secondary py-8 text-center text-surface font-body border-t-4 border-accent space-y-2">
         <p className=" text-surface">&copy; {new Date().getFullYear()} Voces y Agentes.</p>
         <p className="text-sm text-surface">
           Este micrositio alojado en goynmexico.org se apega al{' '}

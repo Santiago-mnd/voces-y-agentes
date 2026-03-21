@@ -27,14 +27,14 @@ export function Registration() {
       fullWidth
       paddingClass="py-16 md:py-24"
     >
-      <InteractiveDecoration src={deco1} alt="" className="absolute left-5 bottom-5 w-24 md:w-32 opacity-70 z-0 rotate-90" />
+      <InteractiveDecoration src={deco1} alt="" className="hidden md:block absolute left-5 bottom-5 w-32 opacity-70 z-0 rotate-90" />
 
-      <div className="max-w-6xl mx-auto relative z-10 space-y-14">
+      <div className="max-w-6xl mx-auto relative z-10 space-y-14 px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-end">
           <div className="space-y-4">
             <p className="font-heading text-sm uppercase tracking-[0.4em] text-surface">Registro abierto</p>
-            <h2 className="font-heading text-5xl md:text-6xl lg:text-7xl text-surface uppercase tracking-[0.028em] leading-tight heading-balanced">
+            <h2 className="font-heading text-4xl md:text-6xl lg:text-7xl text-surface uppercase tracking-[0.028em] leading-tight heading-balanced">
               Únete al movimiento
             </h2>
           </div>
