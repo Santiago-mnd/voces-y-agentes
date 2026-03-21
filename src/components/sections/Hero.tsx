@@ -30,7 +30,7 @@ export function Hero() {
                 <Button variant="primary" fullWidth className="sm:w-auto !bg-primary-soft !text-surface">Ver calendario</Button>
               </a>
               <a href="#registro" className="w-full sm:w-auto">
-                <Button variant="primary" fullWidth className="sm:w-auto !bg-accent">Únete al registro</Button>
+                <Button variant="primary" fullWidth className="sm:w-auto !bg-accent !text-surface">Únete al registro</Button>
               </a>
             </div>
           </div>

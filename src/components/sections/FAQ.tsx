@@ -48,26 +48,31 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
 
   return (
     <div className="bg-surface shadow-sm border border-neutral/10 border-l-4 border-l-secondary">
-      <button
-        type="button"
-        onClick={() => setOpen((prev) => {
-          if (!prev) posthog.capture('faq_opened', { question });
-          return !prev;
-        })}
-        className="w-full flex items-center justify-between gap-4 px-6 py-4 text-left cursor-pointer"
-        aria-expanded={open}
-        aria-controls={contentId}
-      >
-        <span className="font-heading text-xl text-secondary">{question}</span>
-        <span
-          className={`font-heading text-3xl text-secondary transition-transform duration-300 ease-out ${open ? 'rotate-45' : ''}`}
-          aria-hidden
+      <h3>
+        <button
+          id={`faq-trigger-${index}`}
+          type="button"
+          onClick={() => setOpen((prev) => {
+            if (!prev) posthog.capture('faq_opened', { question });
+            return !prev;
+          })}
+          className="w-full flex items-center justify-between gap-4 px-6 py-4 text-left cursor-pointer"
+          aria-expanded={open}
+          aria-controls={contentId}
         >
-          +
-        </span>
-      </button>
+          <span className="font-heading text-xl text-secondary">{question}</span>
+          <span
+            className={`font-heading text-3xl text-secondary transition-transform duration-300 ease-out ${open ? 'rotate-45' : ''}`}
+            aria-hidden
+          >
+            +
+          </span>
+        </button>
+      </h3>
       <div
         id={contentId}
+        role="region"
+        aria-labelledby={`faq-trigger-${index}`}
         className={`px-6 pr-10 ${open ? 'max-h-125 opacity-100 pb-6' : 'max-h-0 opacity-0'} transition-all duration-500 ease-out overflow-hidden`}
       >
         <p className="font-body text-base md:text-lg text-neutral">{answer}</p>

@@ -15,7 +15,6 @@
   --color-secondary: #981ad0;
   --color-success: #679724;
   --color-accent: #269bc0;
-  --color-deep: #0f172a;
   --color-neutral: #545454;
 
   --font-heading: "TAN St. Canard", sans-serif;
@@ -156,6 +155,19 @@ body {
   .cycle-card:hover,
   .cycle-card:focus-within {
     transform: none;
+  }
+}
+
+/* Global focus-visible for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* Reduced motion for flip cards */
+@media (prefers-reduced-motion: reduce) {
+  .flip-card-inner {
+    transition: none;
   }
 }
 

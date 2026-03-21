@@ -2,11 +2,11 @@ import { SectionWrapper } from '../ui/SectionWrapper';
 import { InteractiveDecoration } from '../ui/InteractiveDecoration';
 import deco4 from '../../assets/decorations/04.svg';
 
-const cycleStyles: Record<string, { pill: string }> = {
-  'Raíces':      { pill: 'bg-primary' },
-  'Terreno':     { pill: 'bg-secondary' },
-  'Herramientas':{ pill: 'bg-success' },
-  'Proyección':  { pill: 'bg-primary-soft' },
+const cycleStyles: Record<string, { pill: string; text: string }> = {
+  'Raíces':      { pill: 'bg-primary',      text: 'text-surface' },
+  'Terreno':     { pill: 'bg-secondary',    text: 'text-surface' },
+  'Herramientas':{ pill: 'bg-success',      text: 'text-surface' },
+  'Proyección':  { pill: 'bg-primary-soft',  text: 'text-surface' },
 };
 
 const sessions = [
@@ -130,7 +130,7 @@ export function Schedule() {
                     <p className="font-body text-base text-neutral leading-snug">{session.topic}</p>
                   </div>
                   <div className={`${style.pill} flex items-center justify-center px-4`}>
-                    <span className="font-heading text-white text-sm uppercase tracking-wider text-center">{session.cycle}</span>
+                    <span className={`font-heading ${style.text} text-sm uppercase tracking-wider text-center`}>{session.cycle}</span>
                   </div>
                 </div>
                 {/* Mobile layout */}
@@ -141,7 +141,7 @@ export function Schedule() {
                       <p className="font-heading text-2xl text-neutral">{session.weekday}</p>
                       <p className="font-body text-sm text-neutral/80">{session.date}</p>
                     </div>
-                    <span className={`${style.pill} font-heading text-white text-xs uppercase tracking-wider px-3 py-1.5 flex-none`}>{session.cycle}</span>
+                    <span className={`${style.pill} font-heading ${style.text} text-xs uppercase tracking-wider px-3 py-1.5 flex-none`}>{session.cycle}</span>
                   </div>
                   <div>
                     <p className="font-body text-xs uppercase tracking-[0.4em] text-secondary mb-1">Formato</p>
