@@ -32,7 +32,7 @@ export function Hero() {
 
           <div className="hidden md:flex relative w-full max-w-sm md:max-w-md lg:max-w-lg mx-auto justify-center">
             <div className="relative flex items-center justify-center w-full">
-              <div className="absolute bg-primary-soft rounded-full w-[280px] h-[280px] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] -z-10 mt-6 ml-6"></div>
+              <div className="absolute bg-primary-soft rounded-full w-70 h-70 md:w-87.5 md:h-87.5 lg:w-112.5 lg:h-112.5 -z-10 mt-6 ml-6"></div>
               <img
                 src={faceLogo}
                 alt="Voces y Agentes Carita"
