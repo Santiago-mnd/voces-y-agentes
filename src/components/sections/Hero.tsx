@@ -1,8 +1,5 @@
 ﻿import faceLogo from '../../assets/face.svg';
-import deco1 from '../../assets/decorations/01.svg';
-// import deco2 from '../../assets/decorations/02.svg';
 import { Button } from '../ui/Button';
-import { InteractiveDecoration } from '../ui/InteractiveDecoration';
 import { useInView } from '../../hooks/useInView';
 
 export function Hero() {
@@ -11,8 +8,6 @@ export function Hero() {
   return (
     <section id="hero" className="relative bg-surface min-h-[90vh] flex items-center overflow-hidden pt-16 pb-12 md:pt-40 md:pb-32">
       {/* Background Decoration — solo desktop, abajo a la izquierda para no tapar el texto */}
-      <InteractiveDecoration src={deco1} alt="" className="hidden lg:block absolute -left-10 bottom-16 w-64 opacity-40 z-0 -rotate-12" />
-      {/* <InteractiveDecoration src={deco2} alt="" className="absolute -bottom-10 -right-10 w-32 md:w-40 opacity-50 z-0 rotate-45" /> */}
 
       <div ref={ref} className={`fade-in-up ${isVisible ? 'is-visible' : ''} w-full relative z-10 py-10`}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,10 +22,10 @@ export function Hero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start mt-6">
               <a href="#calendario" className="w-full sm:w-auto">
-                <Button variant="primary" fullWidth className="sm:w-auto !bg-primary-soft !text-surface">Ver calendario</Button>
+                <Button variant="primary" fullWidth className="sm:w-auto bg-primary-soft! text-surface!">Ver calendario</Button>
               </a>
               <a href="#registro" className="w-full sm:w-auto">
-                <Button variant="primary" fullWidth className="sm:w-auto !bg-accent !text-surface">Únete al registro</Button>
+                <Button variant="primary" fullWidth className="sm:w-auto bg-accent! text-surface!">Únete al registro</Button>
               </a>
             </div>
           </div>

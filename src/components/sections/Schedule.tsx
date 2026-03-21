@@ -106,7 +106,7 @@ export function Schedule() {
           <p className="font-heading text-sm uppercase tracking-[0.4em] text-secondary">Calendario</p>
           <h3 className="font-heading text-4xl md:text-5xl text-neutral leading-tight heading-balanced">8 módulos híbridos</h3>
           <p className="font-body text-base md:text-lg text-neutral">
-            Consulta las fechas y formatos de cada taller. Mantén la información al día para que las juventudes organicen su agenda con tiempo.
+            Consulta las fechas y formatos de cada taller.
           </p>
         </div>
         <div className="space-y-4">
