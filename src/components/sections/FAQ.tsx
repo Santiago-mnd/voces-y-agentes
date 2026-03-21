@@ -47,7 +47,7 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
   const contentId = `faq-panel-${index}`;
 
   return (
-    <div className="bg-surface shadow-sm border border-neutral/30">
+    <div className="bg-surface shadow-sm border border-neutral/10 border-l-4 border-l-secondary">
       <button
         type="button"
         onClick={() => setOpen((prev) => {
@@ -111,7 +111,7 @@ export function FAQ() {
 
   return (
     <SectionWrapper id="faq" className="relative overflow-hidden bg-surface py-24 md:py-32">
-      <InteractiveDecoration src={deco1} alt="" className="absolute left-4 -top-6 w-24 md:w-40 opacity-30" />
+      <InteractiveDecoration src={deco1} alt="" className="absolute right-4 top-6 w-20 md:w-32 opacity-20 rotate-12" />
       <div className="relative z-10 max-w-5xl mx-auto space-y-8">
         <h2 className="font-heading text-4xl md:text-5xl text-neutral leading-tight text-center">
           Preguntas frecuentes

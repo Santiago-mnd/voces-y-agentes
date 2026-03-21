@@ -2,6 +2,13 @@ import { SectionWrapper } from '../ui/SectionWrapper';
 import { InteractiveDecoration } from '../ui/InteractiveDecoration';
 import deco4 from '../../assets/decorations/04.svg';
 
+const cycleStyles: Record<string, { pill: string }> = {
+  'Raíces':      { pill: 'bg-primary' },
+  'Terreno':     { pill: 'bg-secondary' },
+  'Herramientas':{ pill: 'bg-success' },
+  'Proyección':  { pill: 'bg-primary-soft' },
+};
+
 const sessions = [
   {
     id: '01',
@@ -96,43 +103,62 @@ export function Schedule() {
       <InteractiveDecoration src={deco4} alt="" className="absolute -right-12 top-10 w-48 md:w-72 opacity-30" />
       <div className="relative z-10 max-w-5xl mx-auto bg-surface/90 border border-secondary/10 p-10 shadow-lg flex flex-col gap-8">
         <div className="space-y-4 text-center md:text-left">
-          <p className="font-heading text-sm uppercase tracking-[0.4em] text-primary">Calendario</p>
-          <h3 className="font-heading text-4xl md:text-5xl text-secondary leading-tight heading-balanced">8 módulos híbridos</h3>
+          <p className="font-heading text-sm uppercase tracking-[0.4em] text-secondary">Calendario</p>
+          <h3 className="font-heading text-4xl md:text-5xl text-neutral leading-tight heading-balanced">8 módulos híbridos</h3>
           <p className="font-body text-base md:text-lg text-neutral">
             Consulta las fechas y formatos de cada taller. Mantén la información al día para que las juventudes organicen su agenda con tiempo.
           </p>
         </div>
-        <div className="space-y-5">
-          {sessions.map((session) => (
-            <article key={session.id} className="border border-neutral/20 bg-surface px-6 py-5 shadow-sm">
-              <div className="flex flex-col gap-4 md:flex-row md:items-center">
-                <div className="md:w-52">
-                  <p className="font-heading text-xs uppercase tracking-[0.5em] text-primary">Sesión {session.id}</p>
-                  <p className="font-heading text-2xl text-secondary">{session.weekday}</p>
-                  <p className="font-body text-sm text-neutral/80">{session.date}</p>
-                </div>
-                <div className="flex-1 grid gap-4 md:grid-cols-[0.9fr_1.4fr_0.7fr]">
-                  <div className="space-y-1">
-                    <p className="font-body text-xs uppercase tracking-[0.4em] text-secondary">Formato</p>
+        <div className="space-y-4">
+          {sessions.map((session) => {
+            const style = cycleStyles[session.cycle];
+            return (
+              <article key={session.id} className="border-l-4 border-l-secondary border border-neutral/10 bg-surface shadow-sm">
+                <div className="hidden md:grid md:grid-cols-[180px_160px_1fr_140px] md:items-stretch">
+                  <div className="px-5 py-4 border-r border-neutral/10">
+                    <p className="font-heading text-xs uppercase tracking-[0.5em] text-secondary">Sesión {session.id}</p>
+                    <p className="font-heading text-2xl text-neutral">{session.weekday}</p>
+                    <p className="font-body text-sm text-neutral/80">{session.date}</p>
+                  </div>
+                  <div className="px-5 py-4 border-r border-neutral/10">
+                    <p className="font-body text-xs uppercase tracking-[0.4em] text-secondary mb-1">Formato</p>
                     <p className="font-heading text-lg">{session.format}</p>
                     <p className="font-body text-sm text-neutral/80">{session.time}</p>
                   </div>
-                  <div className="space-y-1 md:border-x md:border-neutral/20 md:px-4">
-                    <p className="font-body text-xs uppercase tracking-[0.4em] text-secondary">Temas</p>
+                  <div className="px-5 py-4 border-r border-neutral/10">
+                    <p className="font-body text-xs uppercase tracking-[0.4em] text-secondary mb-1">Temas</p>
                     <p className="font-body text-base text-neutral leading-snug">{session.topic}</p>
                   </div>
-                  <div className="space-y-1">
-                    <p className="font-body text-xs uppercase tracking-[0.4em] text-secondary">Ciclo</p>
-                    <p className="font-heading text-lg">{session.cycle}</p>
+                  <div className={`${style.pill} flex items-center justify-center px-4`}>
+                    <span className="font-heading text-white text-sm uppercase tracking-wider text-center">{session.cycle}</span>
                   </div>
                 </div>
-              </div>
-            </article>
-          ))}
+                {/* Mobile layout */}
+                <div className="md:hidden px-5 py-4 flex flex-col gap-3">
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <p className="font-heading text-xs uppercase tracking-[0.5em] text-secondary">Sesión {session.id}</p>
+                      <p className="font-heading text-2xl text-neutral">{session.weekday}</p>
+                      <p className="font-body text-sm text-neutral/80">{session.date}</p>
+                    </div>
+                    <span className={`${style.pill} font-heading text-white text-xs uppercase tracking-wider px-3 py-1.5 flex-none`}>{session.cycle}</span>
+                  </div>
+                  <div>
+                    <p className="font-body text-xs uppercase tracking-[0.4em] text-secondary mb-1">Formato</p>
+                    <p className="font-heading text-lg">{session.format} · <span className="font-body text-sm text-neutral/80">{session.time}</span></p>
+                  </div>
+                  <div>
+                    <p className="font-body text-xs uppercase tracking-[0.4em] text-secondary mb-1">Temas</p>
+                    <p className="font-body text-base text-neutral leading-snug">{session.topic}</p>
+                  </div>
+                </div>
+              </article>
+            );
+          })}
         </div>
-        <div className="border border-primary/30 bg-primary/5 px-6 py-5">
-          <p className="font-heading text-sm uppercase tracking-[0.4em] text-primary mb-2">Seguimiento</p>
-          <p className="font-heading text-2xl text-secondary">{intensiveWeek.range}</p>
+        <div className="border border-accent/30 bg-accent/5 px-6 py-5">
+          <p className="font-heading text-sm uppercase tracking-[0.4em] text-accent mb-2">Seguimiento</p>
+          <p className="font-heading text-2xl text-neutral">{intensiveWeek.range}</p>
           <p className="font-body text-sm text-neutral/80">{intensiveWeek.format}</p>
           <p className="font-body text-base text-neutral mt-2">{intensiveWeek.description}</p>
         </div>

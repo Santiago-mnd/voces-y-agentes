@@ -68,21 +68,25 @@ interface CycleCardProps {
 
 function CycleCard({ cycle, isActive, onToggle, tiltClass }: CycleCardProps) {
   return (
-    <Card className={`cycle-card flip-card ${tiltClass} ${cycle.color}`}>
+    <Card className={`flip-card cursor-pointer ${isActive ? '' : `cycle-card ${tiltClass}`} ${cycle.color}`}>
       <button
         type="button"
         onClick={onToggle}
         aria-expanded={isActive}
-        className={`w-full h-full focus:outline-none focus-visible:ring-4 focus-visible:ring-surface/70 transition-transform duration-300 ${isActive ? 'scale-[1.02]' : 'md:hover:-translate-y-1'}`}
+        className={`w-full h-full cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-surface/70 transition-transform duration-300 ${isActive ? 'scale-[1.02]' : 'md:hover:-translate-y-1'}`}
       >
         <div className={`flip-card-inner ${isActive ? 'is-active' : ''}`}>
           <div className="flip-card-face flip-card-front p-8 h-full flex flex-col gap-4 relative">
             <span className="font-heading text-3xl tracking-wide block">{cycle.title}</span>
             <p className="font-body text-lg leading-relaxed flex-1">{cycle.description}</p>
             <span className="font-body text-xs uppercase tracking-[0.4em] opacity-80">
-              {isActive ? 'Pulsa para volver' : 'Ver temas'}
+              {isActive ? 'Pulsa para volver' : (
+                <>
+                  <span className="hidden md:inline">Clic para ver más</span>
+                  <span className="md:hidden">Toca para ver más</span>
+                </>
+              )}
             </span>
-            <span className="absolute top-4 right-4 font-body text-xs uppercase tracking-[0.3em] opacity-70">Ciclo</span>
           </div>
           <div className="flip-card-face flip-card-back p-8 h-full flex flex-col gap-4 relative">
             <p className="font-heading text-2xl">Temas clave</p>
@@ -138,31 +142,31 @@ export function Participation() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-10 items-stretch">
-          <div className="bg-surface border border-secondary p-10 space-y-6">
+          <div className="bg-surface border-l-4 border-secondary p-10 space-y-6 shadow-sm">
             <h3 className="font-heading text-4xl text-secondary uppercase tracking-[0.2em]">Perfil del Agente VyA</h3>
             <p className="font-body text-lg text-neutral">
               Buscamos mentes inquietas y corazones comprometidos. Si te reconoces en esta lista, ya eres parte del movimiento.
             </p>
-            <ul className="space-y-4">
+            <ul className="space-y-3">
               {profile.map((item) => (
                 <li key={item} className="flex items-start gap-4">
-                  <span className="mt-1 w-4 h-4 border-2 border-secondary flex-none" aria-hidden></span>
+                  <span className="mt-2 w-3 h-3 rounded-full flex-none bg-secondary" aria-hidden />
                   <span className="font-body text-lg text-neutral">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="bg-deep text-surface p-10 flex flex-col justify-between">
+          <div className="bg-accent text-surface p-10 flex flex-col justify-between">
             <div className="space-y-4">
-              <p className="font-heading uppercase tracking-[0.4em] text-sm text-primary-soft">Capital Semilla</p>
+              <p className="font-heading uppercase tracking-[0.4em] text-sm text-surface">Capital Semilla</p>
               <h3 className="font-heading text-4xl leading-tight">Hasta ~$500 USD vía Youth Innovation Fund</h3>
               <p className="font-body text-lg text-surface/80">
                 Cubre la asistencia mínima, valida tu propuesta y accede al fondo para impulsar tu célula de incidencia.
               </p>
             </div>
             <a href="#registro" className="block mt-8">
-              <Button variant="outline" className="w-full text-secondary bg-surface" fullWidth>
+              <Button variant="primary" fullWidth className="!bg-primary-soft !text-surface">
                 Ver calendario y registrarme
               </Button>
             </a>

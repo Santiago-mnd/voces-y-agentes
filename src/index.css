@@ -10,11 +10,11 @@
 }
 @theme {
   --color-surface: #f4f1e8;
-  --color-primary: #ff7300;
+  --color-primary: #df2626;
   --color-primary-soft: #fdb725;
-  --color-secondary: #0969a7;
-  --color-success: #13853c;
-  --color-accent: #fd77b4;
+  --color-secondary: #981ad0;
+  --color-success: #679724;
+  --color-accent: #269bc0;
   --color-deep: #0f172a;
   --color-neutral: #545454;
 
@@ -156,5 +156,27 @@ body {
   .cycle-card:hover,
   .cycle-card:focus-within {
     transform: none;
+  }
+}
+
+/* Fade-in-up animation for sections */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.fade-in-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-up {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
