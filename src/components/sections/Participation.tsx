@@ -1,29 +1,53 @@
-﻿import { SectionWrapper } from '../ui/SectionWrapper';
+﻿import { useState } from 'react';
+import { SectionWrapper } from '../ui/SectionWrapper';
 import { Card } from '../ui/Card';
 import { Button } from '../ui/Button';
 import { InteractiveDecoration } from '../ui/InteractiveDecoration';
 import deco3 from '../../assets/decorations/03.svg';
 
-const cycles = [
+interface Cycle {
+  title: string;
+  description: string;
+  color: string;
+  topics: string[];
+}
+
+const cycles: Cycle[] = [
   {
     title: 'Raíces',
     description: 'Identidad y liderazgo desde el barrio para nombrar lo que duele y lo que inspira.',
-    color: 'bg-primary text-surface'
+    color: 'bg-primary text-surface',
+    topics: [
+      'Bienvenida, encuadre e introducción a la incidencia.',
+      'Juventudes y memoria histórica.'
+    ]
   },
   {
     title: 'Terreno',
     description: 'Lectura de la política local, mapeo de poder y alianzas estratégicas.',
-    color: 'bg-secondary text-surface'
+    color: 'bg-secondary text-surface',
+    topics: [
+      'Identificación de problemáticas, diagnóstico participativo y metodologías MEL.',
+      'Diseño de proyecto YIF.'
+    ]
   },
   {
     title: 'Herramientas',
     description: 'Diseño de estrategias, comunicación y procuración de recursos para proyectos reales.',
-    color: 'bg-success text-surface'
+    color: 'bg-success text-surface',
+    topics: [
+      'Mapeo de actores, iniciativas de ley y poder local.',
+      'RESICO, SAT y cómo facturar.'
+    ]
   },
   {
     title: 'Proyección',
     description: 'Sostenibilidad, monitoreo y formación de formadores para que la red crezca.',
-    color: 'bg-primary-soft text-surface'
+    color: 'bg-primary-soft text-surface',
+    topics: [
+      'Diseño de estrategias de comunicación y storytelling.',
+      'Cultura de paz, violencia política y formación de formadores.'
+    ]
   }
 ];
 
@@ -35,7 +59,56 @@ const profile = [
   'Quieres profesionalizar tu activismo y aprender a gestionar recursos.'
 ];
 
+interface CycleCardProps {
+  cycle: Cycle;
+  isActive: boolean;
+  onToggle: () => void;
+  tiltClass: string;
+}
+
+function CycleCard({ cycle, isActive, onToggle, tiltClass }: CycleCardProps) {
+  return (
+    <Card className={`cycle-card flip-card ${tiltClass} ${cycle.color}`}>
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-expanded={isActive}
+        className={`w-full h-full focus:outline-none focus-visible:ring-4 focus-visible:ring-surface/70 transition-transform duration-300 ${isActive ? 'scale-[1.02]' : 'md:hover:-translate-y-1'}`}
+      >
+        <div className={`flip-card-inner ${isActive ? 'is-active' : ''}`}>
+          <div className="flip-card-face flip-card-front p-8 h-full flex flex-col gap-4 relative">
+            <span className="font-heading text-3xl tracking-wide block">{cycle.title}</span>
+            <p className="font-body text-lg leading-relaxed flex-1">{cycle.description}</p>
+            <span className="font-body text-xs uppercase tracking-[0.4em] opacity-80">
+              {isActive ? 'Pulsa para volver' : 'Ver temas'}
+            </span>
+            <span className="absolute top-4 right-4 font-body text-xs uppercase tracking-[0.3em] opacity-70">Ciclo</span>
+          </div>
+          <div className="flip-card-face flip-card-back p-8 h-full flex flex-col gap-4 relative">
+            <p className="font-heading text-2xl">Temas clave</p>
+            <ul className="space-y-3 font-body text-base leading-relaxed">
+              {cycle.topics.map((topic) => (
+                <li key={topic} className="flex gap-3">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-surface/80 flex-none" aria-hidden></span>
+                  <span>{topic}</span>
+                </li>
+              ))}
+            </ul>
+            <span className="font-body text-xs uppercase tracking-[0.4em] opacity-80 mt-auto">Pulsa para volver</span>
+          </div>
+        </div>
+      </button>
+    </Card>
+  );
+}
+
 export function Participation() {
+  const [activeCycle, setActiveCycle] = useState<number | null>(null);
+
+  const handleToggle = (index: number) => {
+    setActiveCycle((prev) => (prev === index ? null : index));
+  };
+
   return (
     <SectionWrapper
       id="participate"
@@ -54,14 +127,13 @@ export function Participation() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
           {cycles.map((cycle, index) => (
-            <Card
+            <CycleCard
               key={cycle.title}
-              className={`cycle-card ${index % 2 === 0 ? 'cycle-card--tilt-left' : 'cycle-card--tilt-right'} p-8 h-full relative overflow-hidden ${cycle.color}`}
-            >
-              <span className="font-heading text-3xl tracking-wide block mb-4">{cycle.title}</span>
-              <p className="font-body text-lg leading-relaxed">{cycle.description}</p>
-              <span className="absolute top-4 right-4 font-body text-xs uppercase tracking-[0.3em] opacity-70">Ciclo</span>
-            </Card>
+              cycle={cycle}
+              tiltClass={index % 2 === 0 ? 'cycle-card--tilt-left' : 'cycle-card--tilt-right'}
+              isActive={activeCycle === index}
+              onToggle={() => handleToggle(index)}
+            />
           ))}
         </div>
 

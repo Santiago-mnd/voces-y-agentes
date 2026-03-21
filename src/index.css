@@ -114,6 +114,32 @@ body {
   --cycle-tilt: 1deg;
 }
 
+.flip-card {
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  min-height: 260px;
+  transform-style: preserve-3d;
+  transition: transform 600ms cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.flip-card-inner.is-active {
+  transform: rotateY(180deg);
+}
+
+.flip-card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
 @media (max-width: 768px) {
   .cycle-card:hover,
   .cycle-card:focus-within {
