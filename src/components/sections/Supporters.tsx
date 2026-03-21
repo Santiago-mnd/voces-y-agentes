@@ -1,6 +1,6 @@
 ﻿import { SectionWrapper } from '../ui/SectionWrapper';
 import goynLogo from '../../assets/goyn.webp';
-import juventudesLogo from '../../assets/juventudes.webp';
+import juventudesLogo from '../../assets/logo-juventudes.svg';
 
 const supporters = [
   { name: 'Global Opportunity Youth Network (GOYN)', logo: goynLogo },
@@ -22,9 +22,9 @@ export function Supporters() {
         {supporters.map((supporter) => (
           <div
             key={supporter.name}
-            className="bg-white p-6 flex items-center justify-center h-32 min-w-50 max-w-65 shadow-[0_12px_35px_-25px_rgba(15,23,42,0.5)]"
+            className="flex items-center justify-center h-32 min-w-50 max-w-65"
           >
-            <img src={supporter.logo} alt={`Logo ${supporter.name}`} loading="lazy" className="max-h-16 w-auto object-contain" />
+            <img src={supporter.logo} alt={`Logo ${supporter.name}`} loading="lazy" className="max-h-16 w-auto object-contain brightness-0 invert" />
           </div>
         ))}
       </div>

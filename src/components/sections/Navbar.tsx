@@ -67,11 +67,11 @@ export function Navbar() {
             className="flex-shrink-0 group"
             aria-label="Voces y Agentes — inicio"
           >
-            <div className="bg-primary-soft rounded-xl px-3 py-2 transition-transform duration-200 group-hover:-rotate-2 group-hover:scale-105">
-              <span className="font-heading text-surface text-sm leading-tight uppercase block">
-                VOCES Y<br />AGENTES
-              </span>
-            </div>
+            <img
+              src="/icons/vya-logo.svg"
+              alt="Voces y Agentes"
+              className="h-10 lg:h-14 w-auto transition-transform duration-200 group-hover:-rotate-2 group-hover:scale-105"
+            />
           </a>
 
           {/* Desktop nav */}

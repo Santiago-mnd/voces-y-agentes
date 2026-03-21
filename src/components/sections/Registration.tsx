@@ -1,8 +1,6 @@
 ﻿import { usePostHog } from '@posthog/react';
 import { SectionWrapper } from '../ui/SectionWrapper';
 import { Button } from '../ui/Button';
-import { InteractiveDecoration } from '../ui/InteractiveDecoration';
-import deco1 from '../../assets/decorations/01.svg';
 
 const registrationLink = 'https://forms.office.com/Pages/ResponsePage.aspx?id=IuM32_rpj0CWUe-e0ST4bn6LKNdmFmZIi6Vw_xmxOkBUQVdaV0RRQ0wwUE5HV0lYTVBXU1Y5VDZVUS4u';
 
@@ -27,7 +25,6 @@ export function Registration() {
       fullWidth
       paddingClass="py-16 md:py-24"
     >
-      <InteractiveDecoration src={deco1} alt="" className="hidden md:block absolute left-5 bottom-5 w-32 opacity-70 z-0 rotate-90" />
 
       <div className="max-w-6xl mx-auto relative z-10 space-y-14 px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -80,7 +77,7 @@ export function Registration() {
             onClick={() => posthog.capture('click_registro_oficial')}
             className="w-full md:w-auto"
           >
-            <Button className="w-full md:w-auto px-16 py-5 !bg-secondary hover:brightness-110 text-surface text-xl font-extrabold uppercase tracking-widest transition-all">
+            <Button className="w-full md:w-auto px-16 py-5 bg-secondary hover:brightness-110 text-surface text-xl font-extrabold uppercase tracking-widest transition-all">
               Ir al formulario oficial
             </Button>
           </a>

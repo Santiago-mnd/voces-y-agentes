@@ -74,7 +74,7 @@ export function About() {
               <h3 className="font-heading text-xl text-secondary tracking-[0.2em] uppercase mb-4">Nuestros pilares</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {PILLARS.map((pillar) => (
-                  <div key={pillar.title} className={`${pillar.bg} rounded-2xl p-5`}>
+                  <div key={pillar.title} className={`${pillar.bg} p-5`}>
                     <h4 className="font-heading text-white text-base uppercase tracking-wider leading-snug mb-3">{pillar.title}</h4>
                     <p className="font-body text-white/90 text-sm leading-relaxed tracking-wide">{pillar.desc}</p>
                   </div>

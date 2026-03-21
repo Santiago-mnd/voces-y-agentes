@@ -11,9 +11,15 @@
   "icons": [
     {
       "src": "/icons/vya-icon.svg",
-      "sizes": "512x512",
+      "sizes": "180x180",
       "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/vya-icon-2.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
     }
   ]
 }
