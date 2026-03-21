@@ -7,12 +7,15 @@ export function Navbar() {
     { name: 'Inicio', href: '#hero' },
     { name: 'Quiénes somos', href: '#about' },
     { name: 'Nuestro objetivo', href: '#objective' },
-    { name: 'Iniciativas', href: '#initiatives' },
-    { name: 'Únete', href: '#registro' },
+    { name: 'Participa', href: '#participate' },
+    { name: 'Calendario', href: '#calendario' },
+    { name: 'Registro', href: '#registro' },
+    { name: 'Aliadxs', href: '#aliados' },
+    { name: 'FAQ', href: '#faq' }
   ];
 
   return (
-    <nav className="sticky top-0 w-full z-50 bg-surface">
+    <nav className="sticky top-0 w-full z-50 bg-surface shadow-sm" aria-label="Navegación principal de Voces y Agentes">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center flex-shrink-0">

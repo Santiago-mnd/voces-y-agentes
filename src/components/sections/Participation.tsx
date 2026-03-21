@@ -23,7 +23,7 @@ const cycles = [
   {
     title: 'Proyección',
     description: 'Sostenibilidad, monitoreo y formación de formadores para que la red crezca.',
-    color: 'bg-primary-soft text-deep'
+    color: 'bg-primary-soft text-surface'
   }
 ];
 
@@ -46,7 +46,7 @@ export function Participation() {
       <div className="relative z-10 space-y-16">
         <div className="text-center max-w-3xl mx-auto space-y-6">
           <p className="font-heading text-sm uppercase tracking-[0.5em] text-secondary">Únete a la red de agentes</p>
-          <h2 className="font-heading text-5xl md:text-6xl text-deep leading-tight heading-balanced">¿Cómo participar?</h2>
+          <h2 className="font-heading text-5xl md:text-6xl text-secondary leading-tight heading-balanced">¿Cómo participar?</h2>
           <p className="font-body text-lg md:text-xl text-neutral heading-balanced">
             Participar en VyA es iniciar un viaje dividido en cuatro ciclos formativos. Cada uno mezcla teoría, territorio y acompañamiento para que transformes tu barrio con estrategia.
           </p>
@@ -90,7 +90,7 @@ export function Participation() {
               </p>
             </div>
             <a href="#registro" className="block mt-8">
-              <Button variant="outline" className="w-full text-deep bg-surface" fullWidth>
+              <Button variant="outline" className="w-full text-secondary bg-surface" fullWidth>
                 Ver calendario y registrarme
               </Button>
             </a>

@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+﻿import { useEffect, useState } from 'react';
 import { usePostHog } from '@posthog/react';
 import { SectionWrapper } from '../ui/SectionWrapper';
 import { InteractiveDecoration } from '../ui/InteractiveDecoration';
@@ -77,6 +77,38 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
 }
 
 export function FAQ() {
+  useEffect(() => {
+    const schemaId = 'faq-structured-data';
+    const existing = document.getElementById(schemaId);
+    if (existing && existing.parentNode) {
+      existing.parentNode.removeChild(existing);
+    }
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = schemaId;
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer
+        }
+      }))
+    });
+
+    document.head.appendChild(script);
+
+    return () => {
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
     <SectionWrapper id="faq" className="relative overflow-hidden bg-surface py-24 md:py-32">
       <InteractiveDecoration src={deco1} alt="" className="absolute left-4 -top-6 w-24 md:w-40 opacity-30" />

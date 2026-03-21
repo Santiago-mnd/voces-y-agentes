@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section id="hero" className="relative bg-surface min-h-[90vh] flex items-center overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32">
       {/* Background Decoration */}
-      <InteractiveDecoration src={deco1} alt="" className="absolute -left-16 top-20 w-80 opacity-40 z-0 -rotate-12" />
+      <InteractiveDecoration src={deco1} alt="" className="hidden md:block absolute -left-16 top-20 w-80 opacity-40 z-0 -rotate-12" />
       {/* <InteractiveDecoration src={deco2} alt="" className="absolute -bottom-10 -right-10 w-32 md:w-40 opacity-50 z-0 rotate-45" /> */}
 
       <div className="w-full relative z-10 py-10">
@@ -20,7 +20,7 @@ export function Hero() {
               <span className="block text-secondary">Agentes del Cambio</span>
             </h1>
             <p className="font-body text-lg md:text-xl text-neutral mb-12 max-w-md lg:max-w-lg leading-relaxed font-normal">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.
+              Voces y Agentes (VyA) es el laboratorio juvenil de GOYN México que acompaña a jóvenes de Iztapalapa, Cuauhtémoc y Ecatepec para transformar su voluntariado barrial en incidencia política estratégica con formación híbrida, cuidados colectivos y capital semilla.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start mt-6">
               <a href="#calendario" className="w-full sm:w-auto">

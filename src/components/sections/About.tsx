@@ -28,9 +28,15 @@ export function About() {
         </div>
 
         <div className="w-full lg:w-1/2 order-1 lg:order-2">
-          <h2 className="font-heading text-center lg:text-left text-5xl md:text-6xl text-success mb-8 uppercase tracking-[0.028em] leading-tight">¿Quiénes Somos?</h2>
+          <div className="inline-flex flex-col items-center lg:items-start gap-3 mb-8">
+            <h2 className="font-heading text-center lg:text-left text-5xl md:text-6xl text-success uppercase tracking-[0.028em] leading-tight">¿Quiénes Somos?</h2>
+            <div className="flex gap-2" aria-hidden="true">
+              <span className="block h-1.5 w-16 bg-secondary rounded-sm"></span>
+              <span className="block h-1.5 w-12 bg-secondary/70 rounded-sm"></span>
+            </div>
+          </div>
           <div className="space-y-6 font-body text-lg md:text-xl text-neutral leading-relaxed font-normal">
-            <p className="text-deep font-semibold uppercase tracking-[0.3em] text-sm">De la intención a la acción</p>
+            <p className="text-secondary font-semibold uppercase tracking-[0.3em] text-sm">De la intención a la acción</p>
             <p>
               Somos Voces y Agentes (VyA), un Laboratorio de Incidencia y Acción Juvenil nacido en el Valle de México. Impulsamos a juventudes de Iztapalapa, Cuauhtémoc y Ecatepec para que pasen del activismo de base a la incidencia política estratégica.
             </p>

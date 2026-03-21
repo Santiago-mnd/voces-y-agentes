@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://goynmexico.org/voces-y-agentes/sitemap.xml

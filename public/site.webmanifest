@@ -1,0 +1,19 @@
+{
+  "name": "Voces y Agentes",
+  "short_name": "VyA",
+  "description": "Laboratorio juvenil de GOYN México que acompaña a jóvenes de Iztapalapa, Cuauhtémoc y Ecatepec para transformar su activismo en incidencia política.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "lang": "es-MX",
+  "background_color": "#f4f1e8",
+  "theme_color": "#f4f1e8",
+  "icons": [
+    {
+      "src": "/icons/vya-icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

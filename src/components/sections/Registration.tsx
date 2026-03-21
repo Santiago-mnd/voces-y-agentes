@@ -7,15 +7,15 @@ import deco1 from '../../assets/decorations/01.svg';
 const registrationLink = 'https://forms.office.com/Pages/ResponsePage.aspx?id=IuM32_rpj0CWUe-e0ST4bn6LKNdmFmZIi6Vw_xmxOkBUQVdaV0RRQ0wwUE5HV0lYTVBXU1Y5VDZVUS4u';
 
 const steps = [
-  'Comparte tus datos básicos en menos de 5 minutos.',
-  'Indica el ciclo formativo que más te interesa iniciar.',
-  'Confirma que puedes cubrir al menos el 75% de las sesiones híbridas.'
+  'Cuéntanos sobre ti: comparte tus datos y qué te motiva a transformar tu entorno.',
+  'Platícanos tu idea: si ya tienes un colectivo o una propuesta, cuéntanos; y si no, aquí la desarrollaremos contigo.',
+  'Confirma tu compromiso: asegúrate de que puedes asistir al 75% de las sesiones. ¡Tu constancia es clave!'
 ];
 
 const reminders = [
-  'Tienes entre 18 y 29 años.',
-  'Vives o trabajas en Iztapalapa, Cuauhtémoc o Ecatepec.',
-  'Participas en un colectivo, red comunitaria o lideras una iniciativa local.'
+  'Edad: tienes entre 18 y 29 años.',
+  'Territorio: vives, trabajas o realizas acciones de impacto en Iztapalapa, Cuauhtémoc o Ecatepec.',
+  'Acción: participas en un colectivo, red comunitaria o lideras una iniciativa local (o tienes muchas ganas de arrancarla con nosotros).'
 ];
 
 export function Registration() {
@@ -37,9 +37,12 @@ export function Registration() {
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary uppercase tracking-[0.028em] leading-tight md:leading-[1.3] break-words hyphens-auto heading-balanced">
             Únete al movimiento
           </h2>
-          <p className="font-body text-base sm:text-lg md:text-xl text-neutral heading-balanced">
-            Traslada tu energía a la convocatoria oficial. Completa el formulario, agenda la llamada de orientación y activa tu celda de incidencia sin intermediarios.
-          </p>
+          <div className="space-y-4 font-body text-base sm:text-lg md:text-xl text-neutral heading-balanced">
+            <p>¿Tienes una idea para cambiar tu entorno? ¡Queremos conocerla! Regístrate en 15 minutos y agenda tu sesión de orientación.</p>
+            <p>
+              ¿Ya tienes un colectivo armado? ¡Increíble! Y si aún no defines tu proyecto, aquí te acompañamos paso a paso desde la idea inicial hasta ponerla en marcha. ¡Únete a Voces y Agentes!
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
