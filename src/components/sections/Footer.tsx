@@ -33,7 +33,7 @@ export function Footer() {
         <div className="max-w-4xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
           {TEAM.map((person) => (
             <div key={person.name}>
-              <p className="font-heading text-neutral text-lg uppercase tracking-wide leading-tight">
+              <p className="font-body font-extrabold text-neutral text-lg uppercase tracking-wide leading-tight">
                 {person.name}
               </p>
               <p className="font-body text-xs text-neutral/70 uppercase tracking-widest mt-1">
