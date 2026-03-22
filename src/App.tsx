@@ -8,6 +8,7 @@ import { Schedule } from './components/sections/Schedule';
 import { Registration } from './components/sections/Registration';
 import { Supporters } from './components/sections/Supporters';
 import { FAQ } from './components/sections/FAQ';
+import { Footer } from './components/sections/Footer';
 
 function App() {
   return (
@@ -30,21 +31,7 @@ function App() {
         <Supporters />
         <FAQ />
       </main>
-      <footer className="bg-secondary py-8 text-center text-surface font-body border-t-4 border-accent space-y-2">
-        <p className=" text-surface">&copy; {new Date().getFullYear()} Voces y Agentes.</p>
-        <p className="text-sm text-surface">
-          Este micrositio alojado en goynmexico.org se apega al{' '}
-          <a
-            href="https://youthbuildmexico.org/aviso-de-privacidad/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary-soft underline decoration-2 decoration-primary-soft"
-          >
-            aviso de privacidad de GOYN
-          </a>
-          .
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 }
