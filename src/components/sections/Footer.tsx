@@ -36,7 +36,7 @@ export function Footer() {
               <p className="font-body font-extrabold text-neutral text-lg uppercase tracking-wide leading-tight">
                 {person.name}
               </p>
-              <p className="font-body text-xs text-neutral/70 uppercase tracking-widest mt-1">
+              <p className="font-body font-semibold text-sm text-neutral/70 uppercase tracking-widest mt-1">
                 {person.role}
               </p>
               <div className="flex flex-wrap gap-4 mt-3">
