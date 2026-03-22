@@ -36,7 +36,7 @@ export function Footer() {
               <p className="font-heading text-neutral text-lg uppercase tracking-wide leading-tight">
                 {person.name}
               </p>
-              <p className="font-body text-xs text-neutral/50 uppercase tracking-widest mt-1">
+              <p className="font-body text-xs text-neutral/70 uppercase tracking-widest mt-1">
                 {person.role}
               </p>
               <div className="flex flex-wrap gap-4 mt-3">
@@ -76,7 +76,7 @@ export function Footer() {
           onClick={() => setShowCredits((v) => !v)}
           className="text-xs text-surface/50 hover:text-surface transition-colors cursor-pointer uppercase tracking-widest mt-1"
         >
-          {showCredits ? 'Cerrar créditos ↑' : 'Créditos ↓'}
+          {showCredits ? 'Cerrar créditos ↓' : 'Créditos ↑'}
         </button>
       </footer>
     </>
