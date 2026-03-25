@@ -2,6 +2,10 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      // SPA redirect restore (works with 404.html)
+      (function(){var r=sessionStorage.redirect;delete sessionStorage.redirect;if(r&&r!==location.href)history.replaceState(null,null,r)})();
+    </script>
     <link rel="icon" type="image/svg+xml" href="/icons/vya-icon.svg" />
     <link rel="apple-touch-icon" href="/icons/vya-icon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,7 +21,7 @@
     <meta name="author" content="Voces y Agentes" />
     <meta name="robots" content="index,follow" />
     <meta name="theme-color" content="#f4f1e8" />
-    <link rel="canonical" href="https://goynmexico.org/voces-y-agentes" />
+    <link rel="canonical" href="https://vocesyagentes.goynmexico.org" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_MX" />
     <meta property="og:site_name" content="Voces y Agentes" />
@@ -26,7 +30,7 @@
       property="og:description"
       content="Voces y Agentes (VyA) es el laboratorio juvenil de GOYN México que impulsa a jóvenes de Iztapalapa, Cuauhtémoc y Ecatepec para pasar de la organización comunitaria a la incidencia política."
     />
-    <meta property="og:url" content="https://goynmexico.org/voces-y-agentes" />
+    <meta property="og:url" content="https://vocesyagentes.goynmexico.org" />
     <meta property="og:image" content="https://res.cloudinary.com/ddt0pn1m1/image/upload/v1774118767/VOCES_Y_AGENTES_20260321_122520_0000_wlyzvw.png" />
     <meta property="og:image:alt" content="Ilustración del laboratorio juvenil Voces y Agentes de GOYN México" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -42,8 +46,8 @@
         "@type": "NGO",
         "name": "Voces y Agentes (VyA)",
         "alternateName": "Laboratorio de Incidencia Juvenil GOYN México",
-        "url": "https://goynmexico.org/voces-y-agentes",
-        "logo": "https://goynmexico.org/voces-y-agentes/goyn.webp",
+        "url": "https://vocesyagentes.goynmexico.org",
+        "logo": "https://vocesyagentes.goynmexico.org/goyn.webp",
         "description": "Voces y Agentes (VyA) es el laboratorio juvenil de GOYN México que impulsa a las juventudes del Valle de México a diseñar soluciones reales sobre trabajo digno, cultura de paz y derechos humanos.",
         "foundingLocation": "Valle de México, México",
         "areaServed": [
