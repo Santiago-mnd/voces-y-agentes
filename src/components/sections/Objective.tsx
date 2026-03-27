@@ -17,7 +17,7 @@ export function Objective() {
       <div className="max-w-5xl mx-auto text-center relative space-y-12">
         <h2 className="font-heading text-5xl md:text-6xl text-surface uppercase tracking-[0.028em] leading-tight heading-balanced">Nuestro Objetivo</h2>
         <p className="font-body text-base sm:text-lg md:text-2xl lg:text-3xl leading-relaxed text-surface px-4">
-          Fortalecer la capacidad de las juventudes para liderar la transformación de sus propios territorios, transitando del activismo de base a una incidencia estratégica que genere cambios reales, sostenibles y con autonomía en sus comunidades.
+          Fortalecer la capacidad de las y los jóvenes oportunidad para liderar la transformación de sus propios territorios, transitando del activismo de base a una incidencia estratégica que genere cambios reales, sostenibles y con autonomía en sus comunidades.
         </p>
       </div>
     </SectionWrapper>

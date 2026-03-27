@@ -18,7 +18,7 @@ export function Hero() {
               <span className="block text-secondary">Agentes del Cambio</span>
             </h1>
             <p className="font-body text-lg md:text-xl text-neutral mb-12 max-w-md lg:max-w-lg leading-relaxed font-normal">
-              Voces y Agentes (VyA) es el laboratorio juvenil de GOYN México que acompaña a jóvenes de Iztapalapa, Cuauhtémoc y Ecatepec para transformar su voluntariado barrial en incidencia política estratégica con formación híbrida, cuidados colectivos y capital semilla.
+              Voces y Agentes (VyA) es el laboratorio juvenil de GOYN México que acompaña a jóvenes oportunidad de Iztapalapa, Cuauhtémoc y Ecatepec para transformar su voluntariado barrial en incidencia política estratégica con formación híbrida, cuidados colectivos y capital semilla.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start mt-6">
               <a href="#calendario" className="w-full sm:w-auto">

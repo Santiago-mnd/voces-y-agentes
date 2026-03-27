@@ -14,7 +14,7 @@ export function Supporters() {
         <p className="font-heading text-sm uppercase tracking-[0.5em] text-surface">Aliadxs</p>
         <h2 className="font-heading text-4xl md:text-5xl text-surface leading-tight heading-balanced">La red que respalda Voces y Agentes</h2>
         <p className="font-body text-base md:text-lg text-surface/70 heading-balanced">
-          Su acompañamiento permite brindar herramientas, cuidados y capital semilla a las juventudes del Valle de México.
+          Su acompañamiento permite brindar herramientas, cuidados y capital semilla a los jóvenes oportunidad del Valle de México.
         </p>
       </div>
 

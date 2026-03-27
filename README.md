@@ -2,9 +2,9 @@
 
 **Voces y Agentes (VyA)** es el laboratorio de incidencia juvenil de [GOYN México](https://goynmexico.org), impulsado por el **Grupo Asesor de Jóvenes (GAJ)**.
 
-El programa acompaña a jóvenes de 18 a 29 años de Iztapalapa, Cuauhtémoc y Ecatepec para pasar de la organización comunitaria a la incidencia política, trabajando sobre ejes de trabajo digno, cultura de paz y derechos humanos.
+El programa acompaña a jóvenes oportunidad de 18 a 29 años de Iztapalapa, Cuauhtémoc y Ecatepec para pasar de la organización comunitaria a la incidencia política, trabajando sobre ejes de trabajo digno, cultura de paz y derechos humanos.
 
-Este sitio web es el punto de entrada para conocer el programa y registrarse. Es un proyecto de voluntariado: diseñado, desarrollado y mantenido por jóvenes del GAJ.
+Este sitio web es el punto de entrada para conocer el programa y registrarse. Es un proyecto de voluntariado: diseñado, desarrollado y mantenido por jóvenes oportunidad del GAJ.
 
 ## Stack
 
