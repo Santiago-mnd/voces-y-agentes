@@ -19,7 +19,7 @@ const cycles: Cycle[] = [
     color: 'bg-primary text-surface',
     topics: [
       'Bienvenida, encuadre e introducción a la incidencia.',
-      'Juventudes y memoria histórica.'
+      'Jóvenes Oportunidad y memoria histórica.'
     ]
   },
   {

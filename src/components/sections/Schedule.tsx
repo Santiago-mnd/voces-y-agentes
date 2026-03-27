@@ -25,7 +25,7 @@ const sessions = [
     date: '20 de mayo',
     format: 'En línea',
     time: '6:00 p.m. – 8:00 p.m.',
-    topic: 'Juventudes y memoria histórica.',
+    topic: 'Jóvenes Oportunidad y memoria histórica.',
     cycle: 'Raíces'
   },
   {

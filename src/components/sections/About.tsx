@@ -69,7 +69,7 @@ export function About() {
               Somos Voces y Agentes (VyA), un Laboratorio de Incidencia y Acción Juvenil nacido en el Valle de México. Impulsamos a juventudes de Iztapalapa, Cuauhtémoc y Ecatepec para que pasen del activismo de base a la incidencia política estratégica.
             </p>
             <p>
-              Creemos que las Juventudes Oportunidad conocen mejor sus territorios. Les damos herramientas técnicas, acompañamiento psicosocial y capital semilla para que diseñen soluciones reales sobre trabajo digno, cultura de paz y derechos humanos.
+              Creemos que las Jóvenes Oportunidad conocen mejor sus territorios. Les damos herramientas técnicas, acompañamiento psicosocial y capital semilla para que diseñen soluciones reales sobre trabajo digno, cultura de paz y derechos humanos.
             </p>
             <div className="mt-8">
               <h3 className="font-heading text-xl text-secondary tracking-[0.2em] uppercase mb-4">Nuestros pilares</h3>
