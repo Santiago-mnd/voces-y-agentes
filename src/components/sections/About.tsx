@@ -2,7 +2,7 @@ import { SectionWrapper } from '../ui/SectionWrapper';
 import faceLogo from '../../assets/face.svg';
 import deco2 from '../../assets/decorations/02.svg';
 import { InteractiveDecoration } from '../ui/InteractiveDecoration';
-import gaj55 from '../../assets/GAJ-55.jpg';
+import gaj55 from '../../assets/GAJ-53.jpg';
 
 const PILLARS = [
   {
