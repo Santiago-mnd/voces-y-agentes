@@ -2,6 +2,7 @@ import { SectionWrapper } from '../ui/SectionWrapper';
 import faceLogo from '../../assets/face.svg';
 import deco2 from '../../assets/decorations/02.svg';
 import { InteractiveDecoration } from '../ui/InteractiveDecoration';
+import gaj55 from '../../assets/GAJ-55.jpg';
 
 const PILLARS = [
   {
@@ -40,7 +41,7 @@ export function About() {
             {/* Polaroid: rota al contrario del fondo */}
             <div className="relative z-10 bg-white p-3 pb-10 shadow-xl w-4/5 rotate-3">
               <img
-                src="https://t3.ftcdn.net/jpg/15/96/34/16/360_F_1596341627_WhD3YIDJPjv9LAUyL7HVsWTk0QYz8gUq.jpg"
+                src={gaj55}
                 alt="Foto del equipo Voces y Agentes"
                 className="w-full object-cover"
               />
