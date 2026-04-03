@@ -1,4 +1,6 @@
 ﻿import type { CSSProperties, ReactNode } from 'react';
+import { useEffect } from 'react';
+import { usePostHog } from '@posthog/react';
 import { useInView } from '../../hooks/useInView';
 
 type DiagonalStyle = CSSProperties & {
@@ -26,7 +28,13 @@ export function SectionWrapper({
   fullWidth = false,
   paddingClass = 'py-16 md:py-24'
 }: SectionWrapperProps) {
+  const posthog = usePostHog();
   const { ref, isVisible } = useInView();
+
+  useEffect(() => {
+    if (isVisible) posthog.capture('section_viewed', { section: id });
+  }, [isVisible]);
+
   const diagonalClasses = diagonal ? `section-diagonal section-diagonal-${diagonal}` : '';
   const sectionClasses = `${diagonal ? 'relative' : ''} ${paddingClass} ${diagonalClasses} ${className}`;
   const diagonalStyle: DiagonalStyle | undefined = diagonal ? { '--diagonal-color': diagonalColor } : undefined;
