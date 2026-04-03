@@ -1,4 +1,5 @@
 ﻿import { Navbar } from './components/sections/Navbar';
+import { FloatingRegistrationButton } from './components/ui/FloatingRegistrationButton';
 import { Hero } from './components/sections/Hero';
 import { About } from './components/sections/About';
 import { Objective } from './components/sections/Objective';
@@ -32,6 +33,7 @@ function App() {
         <FAQ />
       </main>
       <Footer />
+      <FloatingRegistrationButton />
     </div>
   );
 }
