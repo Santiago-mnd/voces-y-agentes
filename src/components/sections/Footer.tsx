@@ -5,7 +5,7 @@ const TEAM = [
     name: 'Ana Victoria Avila Alvarez',
     role: 'Identidad y diseño visual',
     links: [
-      { label: 'LinkedIn', href: 'https://www.linkedin.com/profile/in/ana-victoria-avila-alvarez-031383287/' },
+      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ana-victoria-avila-alvarez/' },
     ],
   },
   {
