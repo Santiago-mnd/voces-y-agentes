@@ -34,7 +34,8 @@ export function FloatingRegistrationButton() {
       }`}
     >
       <button className="bg-accent text-surface font-body font-extrabold text-sm uppercase tracking-widest px-6 py-4 shadow-lg hover:brightness-110 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary cursor-pointer">
-        Únete al registro ↗
+        <span className="sm:hidden">¡Regístrate!</span>
+        <span className="hidden sm:inline">Únete al registro ↗</span>
       </button>
     </a>
   );
