@@ -33,5 +33,5 @@ Este sitio existe gracias al trabajo voluntario de:
 
 | Nombre | Rol | Enlaces |
 |--------|-----|---------|
-| **Ana Victoria Avila Alvarez** | Identidad y diseño visual | [LinkedIn](https://www.linkedin.com/profile/in/ana-victoria-avila-alvarez-031383287/) |
+| **Ana Victoria Avila Alvarez** | Identidad y diseño visual | [LinkedIn](https://www.linkedin.com/in/ana-victoria-avila-alvarez/) |
 | **Santiago Garcia Arellano** | Diseño UI y desarrollo web | [Portafolio](https://www.santiagos.mx/) &bull; [GitHub](https://github.com/Santiago-mnd) &bull; [LinkedIn](https://www.linkedin.com/in/santiago-garcia-arellano/) |
