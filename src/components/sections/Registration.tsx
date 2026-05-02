@@ -1,4 +1,5 @@
 ﻿import { usePostHog } from '@posthog/react';
+import { Link } from 'react-router';
 import { SectionWrapper } from '../ui/SectionWrapper';
 import { Button } from '../ui/Button';
 
@@ -65,6 +66,12 @@ export function Registration() {
                 </li>
               ))}
             </ul>
+            <Link
+              to="/requisitos"
+              className="inline-block font-body text-sm text-secondary hover:text-accent underline underline-offset-2 transition-colors pt-2"
+            >
+              Consulta los requisitos completos →
+            </Link>
           </div>
         </div>
 

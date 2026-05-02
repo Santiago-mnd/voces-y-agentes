@@ -35,17 +35,16 @@ export function SectionWrapper({
     if (isVisible) posthog.capture('section_viewed', { section: id });
   }, [isVisible]);
 
-  const diagonalClasses = diagonal ? `section-diagonal section-diagonal-${diagonal}` : '';
-  const sectionClasses = `${diagonal ? 'relative' : ''} ${paddingClass} ${diagonalClasses} ${className}`;
+  const diagonalClasses = diagonal ? 'section-diagonal section-diagonal-' + diagonal : '';
+  const sectionClasses = (diagonal ? 'relative ' : '') + paddingClass + ' ' + diagonalClasses + ' ' + className;
   const diagonalStyle: DiagonalStyle | undefined = diagonal ? { '--diagonal-color': diagonalColor } : undefined;
 
   return (
     <section id={id} className={sectionClasses} style={diagonalStyle}>
       <div
         ref={ref}
-        className={`relative fade-in-up ${isVisible ? 'is-visible' : ''} ${diagonal ? 'z-10' : ''} ${
-          fullWidth ? '' : 'container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl'
-        } ${containerClassName}`}
+        className={'relative fade-in-up ' + (isVisible ? 'is-visible' : '') + ' ' + (diagonal ? 'z-10' : '') + ' ' +
+          (fullWidth ? '' : 'container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl') + ' ' + containerClassName}
       >
         {children}
       </div>
