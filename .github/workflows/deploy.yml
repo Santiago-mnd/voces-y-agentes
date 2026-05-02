@@ -41,3 +41,6 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Notify IndexNow (Bing, Brave, Yandex, Seznam)
+        run: |
+          curl -s "https://api.indexnow.org/indexnow?url=https://vocesyagentes.goynmexico.org&key=6acab009529b0b45d0c4d2a1dc41169d"
