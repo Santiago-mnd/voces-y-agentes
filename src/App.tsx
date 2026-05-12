@@ -4,6 +4,7 @@ import { FloatingRegistrationButton } from './components/ui/FloatingRegistration
 import { Footer } from './components/sections/Footer';
 import { Home } from './pages/Home';
 import { Requisitos } from './pages/Requisitos';
+import { NuestrosAntecedentes } from './pages/NuestrosAntecedentes';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/requisitos" element={<Requisitos />} />
+            <Route path="/nuestros-antecedentes" element={<NuestrosAntecedentes />} />
           </Routes>
         </main>
         <Footer />

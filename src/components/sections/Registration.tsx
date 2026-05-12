@@ -1,5 +1,4 @@
 ﻿import { usePostHog } from '@posthog/react';
-import { Link } from 'react-router';
 import { SectionWrapper } from '../ui/SectionWrapper';
 import { Button } from '../ui/Button';
 
@@ -17,8 +16,14 @@ const reminders = [
   'Acción: participas en un colectivo, red comunitaria o lideras una iniciativa local (o tienes muchas ganas de arrancarla con nosotros).'
 ];
 
-export function Registration() {
+interface RegistrationProps {
+  showRequirements: boolean;
+  onToggleRequirements: () => void;
+}
+
+export function Registration({ showRequirements, onToggleRequirements }: RegistrationProps) {
   const posthog = usePostHog();
+
   return (
     <SectionWrapper
       id="registro"
@@ -44,51 +49,55 @@ export function Registration() {
 
         {/* Lists */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-secondary p-8 space-y-5">
-            <h3 className="font-heading text-2xl uppercase tracking-[0.2em] text-white">¿Qué harás?</h3>
-            <ul className="space-y-4">
-              {steps.map((step, i) => (
-                <li key={step} className="flex gap-4 text-left">
-                  <span className="font-heading text-surface text-lg leading-none flex-none">{String(i + 1).padStart(2, '0')}</span>
-                  <span className="font-body text-base text-white/90 leading-snug">{step}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="bg-surface border-l-4 border-secondary p-8 space-y-5 shadow-sm">
-            <h3 className="font-heading text-2xl uppercase tracking-[0.2em] text-secondary">Requisitos rápidos</h3>
-            <ul className="space-y-4">
-              {reminders.map((item) => (
-                <li key={item} className="flex gap-3 text-left">
-                  <span className="mt-2 h-2.5 w-2.5 rounded-full bg-secondary flex-none" aria-hidden />
-                  <span className="font-body text-base text-neutral leading-snug">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <Link
-              to="/requisitos"
-              className="inline-block font-body text-sm text-secondary hover:text-accent underline underline-offset-2 transition-colors pt-2"
+          {/* Columna izquierda — acción */}
+          <div className="flex flex-col gap-4">
+            <div className="bg-secondary p-8 space-y-5 flex-1">
+              <h3 className="font-heading text-2xl uppercase tracking-[0.2em] text-white">¿Qué harás?</h3>
+              <ul className="space-y-4">
+                {steps.map((step, i) => (
+                  <li key={step} className="flex gap-4 text-left">
+                    <span className="font-heading text-surface text-lg leading-none flex-none">{String(i + 1).padStart(2, '0')}</span>
+                    <span className="font-body text-base text-white/90 leading-snug">{step}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <a
+              href={registrationLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => posthog.capture('click_registro_oficial')}
+              className="block"
             >
-              Consulta los requisitos completos →
-            </Link>
+              <Button variant="secondary" fullWidth>
+                Ir al formulario oficial
+              </Button>
+            </a>
           </div>
-        </div>
 
-        {/* CTA */}
-        <div className="flex flex-col items-center gap-3">
-          <a
-            href={registrationLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => posthog.capture('click_registro_oficial')}
-            className="w-full md:w-auto"
-          >
-            <Button className="w-full md:w-auto px-16 py-5 bg-secondary hover:brightness-110 text-surface text-xl font-extrabold uppercase tracking-widest transition-all">
-              Ir al formulario oficial
-            </Button>
-          </a>
-          <p className="text-sm text-neutral/80">El formulario se abrirá en una pestaña nueva.</p>
+          {/* Columna derecha — información */}
+          <div className="flex flex-col gap-4">
+            <div className="bg-surface border-l-4 border-secondary p-8 space-y-5 shadow-sm flex-1">
+              <h3 className="font-heading text-2xl uppercase tracking-[0.2em] text-secondary">Requisitos rápidos</h3>
+              <ul className="space-y-4">
+                {reminders.map((item) => (
+                  <li key={item} className="flex gap-3 text-left">
+                    <span className="mt-2 h-2.5 w-2.5 rounded-full bg-secondary flex-none" aria-hidden />
+                    <span className="font-body text-base text-neutral leading-snug">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <button
+              type="button"
+              onClick={onToggleRequirements}
+              aria-expanded={showRequirements}
+              aria-controls="requisitos"
+              className="inline-flex items-center justify-center font-body px-6 py-3 bg-secondary text-surface font-extrabold text-lg transition-all hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary cursor-pointer w-full"
+            >
+              {showRequirements ? 'Cerrar requisitos' : 'Requisitos para acceder al fondo de innovación'}
+            </button>
+          </div>
         </div>
       </div>
     </SectionWrapper>

@@ -1,4 +1,5 @@
-﻿import faceLogo from '../../assets/face.svg';
+﻿import { Link } from 'react-router';
+import faceLogo from '../../assets/face.svg';
 import { Button } from '../ui/Button';
 import { useInView } from '../../hooks/useInView';
 
@@ -18,7 +19,7 @@ export function Hero() {
               <span className="block text-secondary">Agentes del Cambio</span>
             </h1>
             <p className="font-body text-lg md:text-xl text-neutral mb-12 max-w-md lg:max-w-lg leading-relaxed font-normal">
-              Voces y Agentes (VyA) es el laboratorio juvenil de GOYN México que acompaña a jóvenes oportunidad de Iztapalapa, Cuauhtémoc y Ecatepec para transformar su voluntariado barrial en incidencia política estratégica con formación híbrida, cuidados colectivos y capital semilla.
+              Voces y Agentes — VyA es el laboratorio juvenil de GOYN México que acompaña a jóvenes oportunidad de Iztapalapa, Cuauhtémoc y Ecatepec para transformar su voluntariado barrial en incidencia política estratégica. Nuestro modelo, basado en el Programa de Liderazgo para la Equidad (Equity Leadership Program — ELP), integra formación híbrida, cuidados colectivos y capital semilla.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start mt-6">
               <a href="#calendario" className="w-full sm:w-auto">
@@ -27,6 +28,9 @@ export function Hero() {
               <a href="#registro" className="w-full sm:w-auto">
                 <Button variant="primary" fullWidth className="sm:w-auto bg-accent! text-surface!">Únete al registro</Button>
               </a>
+              <Link to="/nuestros-antecedentes" className="w-full sm:w-auto">
+                <Button variant="primary" fullWidth className="sm:w-auto bg-secondary! text-surface!">Conoce nuestros antecedentes</Button>
+              </Link>
             </div>
           </div>
 
