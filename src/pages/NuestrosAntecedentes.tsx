@@ -1,9 +1,5 @@
 import { useEffect } from 'react';
-import { usePostHog } from '@posthog/react';
 import { SectionWrapper } from '../components/ui/SectionWrapper';
-import { Button } from '../components/ui/Button';
-
-const registrationLink = 'https://forms.office.com/Pages/ResponsePage.aspx?id=IuM32_rpj0CWUe-e0ST4bn6LKNdmFmZIi6Vw_xmxOkBUQVdaV0RRQ0wwUE5HV0lYTVBXU1Y5VDZVUS4u';
 
 const liderazgo = [
   {
@@ -111,8 +107,6 @@ const fechasClave = [
 ];
 
 export function NuestrosAntecedentes() {
-  const posthog = usePostHog();
-
   useEffect(() => {
     document.title = 'Nuestros Antecedentes | Voces y Agentes';
     window.scrollTo(0, 0);
@@ -253,7 +247,7 @@ export function NuestrosAntecedentes() {
             {impacto.map((item, i) => (
               <div key={item.title} className="bg-surface border border-neutral/10 p-8 space-y-4 shadow-sm">
                 <span className="font-heading text-3xl text-secondary">{String(i + 1).padStart(2, '0')}</span>
-                <h4 className="font-heading text-xl uppercase tracking-[0.2em] text-secondary">
+                <h4 className="font-heading text-xl uppercase tracking-[0.2em] text-secondary break-words">
                   {item.title}
                 </h4>
                 <p className="font-body text-base text-neutral leading-relaxed">
@@ -275,10 +269,10 @@ export function NuestrosAntecedentes() {
         <div className="max-w-6xl mx-auto space-y-14 px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-6">
             <p className="font-heading text-sm uppercase tracking-[0.4em] text-surface">
-              Convocatoria abierta
+              Convocatoria cerrada
             </p>
             <h2 className="font-heading text-4xl md:text-6xl lg:text-7xl text-surface uppercase tracking-[0.028em] leading-tight heading-balanced">
-              ¡Postula al fondo de Innovación Juvenil!
+              Conoce el fondo de Innovación Juvenil
             </h2>
             <p className="font-body text-lg md:text-xl text-surface leading-relaxed max-w-3xl mx-auto">
               En Voces y Agentes — VyA, creemos que la transformación de nuestros barrios no ocurre de forma aislada. La incidencia real nace cuando las y los Jóvenes Oportunidad unen su liderazgo para transformar realidades locales.
@@ -308,7 +302,7 @@ export function NuestrosAntecedentes() {
                 </li>
                 <li className="flex gap-3">
                   <span className="mt-2 h-2 w-2 rounded-full bg-secondary flex-none" aria-hidden />
-                  <span><strong>Distribución:</strong> Contamos con fondos para 7 proyectos de $500 USD y 3 proyectos de $250 USD.</span>
+                  <span><strong>Distribución:</strong> Contamos con fondos para 10 proyectos en total: 8 de $500 USD y 2 de $250 USD.</span>
                 </li>
               </ul>
             </div>
@@ -477,22 +471,11 @@ export function NuestrosAntecedentes() {
       >
         <div className="max-w-4xl mx-auto text-center space-y-8 px-4">
           <h2 className="font-heading text-4xl md:text-5xl text-surface uppercase tracking-[0.028em] leading-tight heading-balanced">
-            ¿Listo para transformar tu barrio?
+            ¡Gracias por ser parte del cambio!
           </h2>
           <p className="font-body text-lg md:text-xl text-surface leading-relaxed max-w-2xl mx-auto">
-            Tu idea tiene el potencial de generar cambio real. Regístrate ahora y da el primer paso hacia la autonomía de tu comunidad.
+            Voces y Agentes continúa. Estén atentos a las próximas convocatorias y novedades del movimiento.
           </p>
-          <a
-            href={registrationLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => posthog.capture('click_registro_antecedentes')}
-            className="inline-block"
-          >
-            <Button className="px-16 py-5 bg-secondary hover:brightness-110 text-surface text-xl font-extrabold uppercase tracking-widest transition-all">
-              Ir al formulario oficial
-            </Button>
-          </a>
         </div>
       </SectionWrapper>
     </>

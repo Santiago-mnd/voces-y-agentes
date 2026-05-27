@@ -7,7 +7,7 @@ const links = [
   { name: 'Nuestro objetivo', href: '/#objective' },
   { name: 'Participa', href: '/#participate' },
   { name: 'Calendario', href: '/#calendario' },
-  { name: 'Registro', href: '/#registro' },
+  { name: 'Actualizaciones', href: '/#registro' },
   { name: 'Aliadxs', href: '/#aliados' },
   { name: 'FAQ', href: '/#faq' },
 ];

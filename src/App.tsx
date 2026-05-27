@@ -1,6 +1,5 @@
 ﻿import { BrowserRouter, Routes, Route } from 'react-router';
 import { Navbar } from './components/sections/Navbar';
-import { FloatingRegistrationButton } from './components/ui/FloatingRegistrationButton';
 import { Footer } from './components/sections/Footer';
 import { Home } from './pages/Home';
 import { Requisitos } from './pages/Requisitos';
@@ -25,7 +24,6 @@ function App() {
           </Routes>
         </main>
         <Footer />
-        <FloatingRegistrationButton />
       </div>
     </BrowserRouter>
   );

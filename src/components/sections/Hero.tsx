@@ -25,9 +25,6 @@ export function Hero() {
               <a href="#calendario" className="w-full sm:w-auto">
                 <Button variant="primary" fullWidth className="sm:w-auto bg-primary-soft! text-surface!">Ver calendario</Button>
               </a>
-              <a href="#registro" className="w-full sm:w-auto">
-                <Button variant="primary" fullWidth className="sm:w-auto bg-accent! text-surface!">Únete al registro</Button>
-              </a>
               <Link to="/nuestros-antecedentes" className="w-full sm:w-auto">
                 <Button variant="primary" fullWidth className="sm:w-auto bg-secondary! text-surface!">Conoce nuestros antecedentes</Button>
               </Link>
