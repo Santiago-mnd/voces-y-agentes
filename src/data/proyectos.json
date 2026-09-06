@@ -63,7 +63,8 @@
         "logo": null,
         "galeria": []
       },
-      "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados"
+      "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados",
+      "vistaGaleria": "carrusel"
     },
     {
       "slug": "colectiva-moms",
@@ -124,7 +125,8 @@
         "logo": null,
         "galeria": []
       },
-      "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados"
+      "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados",
+      "vistaGaleria": "carrusel"
     },
     {
       "slug": "decidir-mx",
@@ -225,7 +227,8 @@
           "/assets-images/proyectos/air-trans/galeria-4.webp"
         ]
       },
-      "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados"
+      "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados",
+      "vistaGaleria": "carrusel"
     }
   ]
 }
