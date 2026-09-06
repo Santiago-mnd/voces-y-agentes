@@ -4,6 +4,8 @@ import { Footer } from './components/sections/Footer';
 import { Home } from './pages/Home';
 import { NuestrosAntecedentes } from './pages/NuestrosAntecedentes';
 import { NotFound } from './pages/NotFound';
+import { Proyectos } from './pages/Proyectos';
+import { ProyectoDetalle } from './pages/ProyectoDetalle';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/nuestros-antecedentes" element={<NuestrosAntecedentes />} />
+            <Route path="/proyectos" element={<Proyectos />} />
+            <Route path="/proyectos/:slug" element={<ProyectoDetalle />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router';
+import { setPageMeta } from '../lib/meta';
 import { Hero } from '../components/sections/Hero';
 import { About } from '../components/sections/About';
 import { Objective } from '../components/sections/Objective';
@@ -11,6 +12,14 @@ import { FAQ } from '../components/sections/FAQ';
 
 export function Home() {
   const location = useLocation();
+
+  useEffect(() => {
+    setPageMeta({
+      title: 'Voces y Agentes | Laboratorio juvenil GOYN México',
+      description: 'Voces y Agentes (VyA) es el laboratorio juvenil de GOYN México que impulsa a jóvenes oportunidad de Iztapalapa, Cuauhtémoc y Ecatepec para pasar de la organización comunitaria a la incidencia política.',
+      path: '/',
+    });
+  }, []);
 
   // Handle scroll for hashes
   useEffect(() => {

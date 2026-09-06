@@ -10,6 +10,7 @@ const links = [
   { name: 'Actualizaciones', href: '/#registro' },
   { name: 'Aliadxs', href: '/#aliados' },
   { name: 'FAQ', href: '/#faq' },
+  { name: 'Proyectos', href: '/proyectos' },
 ];
 
 export function Navbar() {

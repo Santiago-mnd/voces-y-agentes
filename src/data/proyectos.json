@@ -1,0 +1,231 @@
+{
+  "$comentario": "Fuente de verdad de /proyectos. Validado por scripts/validate-proyectos.mjs en cada build. Sistema de fichas: docs/blog-source/ (docs manda sobre este JSON; este JSON manda sobre el sitio).",
+  "proyectos": [
+    {
+      "slug": "fuega-autodefensa",
+      "nombre": "Fuega Autodefensa",
+      "tagline": "Autodefensa feminista para transitar los territorios más seguros",
+      "tema": "Autodefensa feminista",
+      "estado": "finalizado",
+      "resumen": "Fuega Autodefensa lleva la autodefensa feminista a mujeres jóvenes de Ecatepec y otras periferias: tres sesiones con 24 jóvenes (16 presenciales y 24 en línea) y una convocatoria que sumó 132 postulantes.",
+      "pasoPorVyA": "Para Fuega, Voces y Agentes fue más que un laboratorio de ideas: un espacio de acuerpe, donde encontraron a quienes arroparon sus ideas y las acompañaron a darles forma — gente que también quiere incidir en su territorio.",
+      "adaptacion": "Con las herramientas de storytelling y diseño de contenido transformaron su manera de convocar: sus redes crecieron exponencialmente y construyeron materiales para medir el desempeño del taller y los aprendizajes obtenidos.",
+      "liderazgo": "El laboratorio les ayudó a reconocer herramientas que ya tenían y a desarrollarlas en nuevos espacios que se les abrieron gracias al proyecto y a las personas que conocieron en él.",
+      "cifras": [
+        {
+          "valor": "24",
+          "label": "mujeres jóvenes directas"
+        },
+        {
+          "valor": "132",
+          "label": "postulaciones a la convocatoria"
+        },
+        {
+          "valor": "3",
+          "label": "sesiones impartidas"
+        },
+        {
+          "valor": "16",
+          "label": "asistentes presenciales"
+        }
+      ],
+      "testimonio": {
+        "texto": "Las herramientas que aprendí hoy me ayudarán a sentirme más tranquila al transitar camino a casa de noche y/o en transporte público en espacios mixtos",
+        "autor": "Participante del taller"
+      },
+      "consejo": "Aprovechen cada clase y conozcan a todas las personas que forman parte de este proyecto; grandes cosas podrán construir juntes con lo aprendido.",
+      "territorios": [
+        "Iztapalapa",
+        "Ecatepec",
+        "Acolman",
+        "Zumpango",
+        "San Pablo Chimalpa",
+        "Tláhuac",
+        "Naucalpan de Juárez",
+        "Gustavo A. Madero",
+        "Nezahualcóyotl"
+      ],
+      "redes": [
+        {
+          "tipo": "instagram",
+          "url": "https://instagram.com/fuega_autodefensa"
+        },
+        {
+          "tipo": "tiktok",
+          "url": "https://tiktok.com/@fuega_autodefensa"
+        },
+        {
+          "tipo": "linkedin",
+          "url": "https://linkedin.com/company/fuega-autodefensa"
+        }
+      ],
+      "media": {
+        "logo": null,
+        "galeria": []
+      },
+      "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados"
+    },
+    {
+      "slug": "colectiva-moms",
+      "nombre": "Colectiva Moms",
+      "tagline": "Redes que evolucionan",
+      "tema": "Maternidad joven y cuidados",
+      "estado": "en-marcha",
+      "resumen": "Colectiva Moms acompaña a madres jóvenes con talleres de maternidad y cuidados: 25 jóvenes seleccionadas de 40 registros, con su primer mes de taller en marcha. Su comunidad crece en redes con 5 publicaciones colaborativas y 9.2k de alcance en Instagram.",
+      "pasoPorVyA": "Los conocimientos que el GAJ nos brindó en cada laboratorio son algo que ahora llevo conmigo siempre, pero lo más valioso sin duda son los proyectos y la gente (amigos, amigas) y apoyo dentro del laboratorio: es lo más valioso que me llevo.",
+      "adaptacion": "Desde el michear un post, el storytelling y lo aprendido en redes lo llevo conmigo y ha sido parte del crecimiento de Moms en redes. El conectar con mis alumnas, las armonizaciones antes de clases, ha sido algo que aprendí y que llevo y recuerdo para cada taller. La ternura radical me acompaña cuando lo que pasa en el mundo, las noticias y la vida cotidiana me sobrepasan.",
+      "liderazgo": "Pues sin duda, no sé qué expectativa llevaba, pues no imaginaba que sucedería, pero este laboratorio sin duda me dio más confianza en mi liderazgo frente a la colectiva, frente a cómo me presento en los talleres, el cómo presento y las técnicas que utilizo.",
+      "cifras": [
+        {
+          "valor": "25",
+          "label": "jóvenes directas"
+        },
+        {
+          "valor": "40",
+          "label": "registros"
+        },
+        {
+          "valor": "9.2k",
+          "label": "de alcance en Instagram"
+        },
+        {
+          "valor": "5",
+          "label": "publicaciones colaborativas"
+        }
+      ],
+      "testimonio": {
+        "texto": "Los primeros auxilios, la maternidad y los cuidados son colectivos",
+        "autor": "Colectiva Moms"
+      },
+      "consejo": "¡Atrévanse! ¡Creen! Yo tenía tanto miedo y estoy sorprendida del avance.",
+      "territorios": [
+        "Iztapalapa",
+        "Ecatepec",
+        "Nezahualcóyotl",
+        "Gustavo A. Madero",
+        "Chihuahua",
+        "Durango"
+      ],
+      "redes": [
+        {
+          "tipo": "instagram",
+          "url": "https://www.instagram.com/colectiva.moms?igsi=dnJpZjY1MW1tNGhq"
+        },
+        {
+          "tipo": "tiktok",
+          "url": "https://www.tiktok.com/@aprendemom?_r=1&_t=ZS-99Ain7U0xiz"
+        },
+        {
+          "tipo": "facebook",
+          "url": "https://www.facebook.com/share/1DpGVYAjzo/"
+        }
+      ],
+      "media": {
+        "logo": null,
+        "galeria": []
+      },
+      "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados"
+    },
+    {
+      "slug": "decidir-mx",
+      "nombre": "Decidir Mx",
+      "tema": "Derechos sexuales y reproductivos",
+      "estado": "en-marcha",
+      "resumen": "Decidir Mx es una colectiva juvenil de reciente creación que promueve la participación de las juventudes en sus derechos sexuales y reproductivos. Con su taller “Decidir con Derechos: Voces al Frente 2026”, 9 jóvenes de Iztapalapa mapearon necesidades, barreras e intervenciones desde su propia experiencia, fortaleciendo su capacidad de argumentar ante las autoridades.",
+      "pasoPorVyA": "Para Decidir Mx, Voces y Agentes significó un espacio de construcción, reconocimiento y aprendizaje. Para nosotras, fue una oportunidad para fortalecernos como colectiva y reafirmar que nuestra misión es importante. La confianza depositada en nosotras y el reconocimiento de la relevancia de nuestro proyecto nos motivaron mucho, nos permitieron reconocer que no estamos solas y que nuestra causa tiene sentido y una relevancia importante en nuestra sociedad actualmente.",
+      "adaptacion": "Para nosotras es importante promover siempre la participación de las juventudes. Por ello, durante nuestro taller “Decidir con Derechos: Voces al Frente 2026”, trabajamos desde una metodología participativa que buscó favorecer el reconocimiento de las necesidades y oportunidades que las juventudes participantes identifican en su entorno, en este caso, la Alcaldía Iztapalapa, a través de un mapeo comunitario y de actores que sirvió para que lxs participantes reconocieran desde su experiencia y sus conocimientos qué necesidades hay, a quiénes pueden acudir, pero también aquello que no saben y que quizá es importante conocer. Fueron ellas y ellos quienes guiaron el taller, establecieron definiciones y nombraron las barreras y necesidades que identifican en torno a los derechos sexuales y reproductivos, así como posibles intervenciones. De esta manera, fortalecieron sus herramientas para que sean ellas y ellos quienes, en su momento, puedan argumentar ante las autoridades a partir de las problemáticas que observan y viven en sus comunidades.",
+      "liderazgo": "Creemos que este laboratorio nos dio el impulso que necesitábamos para posicionarnos como colectiva. Al ser una colectiva de reciente creación, consideramos muy importante que otras colectivas, así como espacios de incidencia, incluidas algunas instituciones de gobierno, comiencen a reconocernos como una colectiva juvenil con capacidad para generar impacto en el territorio y, al mismo tiempo, desarrollar procesos de enseñanza-aprendizaje significativos. Esto ha fortalecido nuestra confianza para continuar construyendo espacios en los que las voces de las juventudes sean escuchadas y tomadas en cuenta en la toma de decisiones.",
+      "cifras": [
+        {
+          "valor": "9",
+          "label": "jóvenes directas"
+        }
+      ],
+      "testimonio": {
+        "texto": "Me voy informada, conozco mejor sobre mis derechos sexuales y reproductivos. La iniciativa está súper increíble, me da un montón de esperanza, estoy súper feliz de este taller. ¡Más de estos, por favor!",
+        "autor": "Xóchitl, participante"
+      },
+      "consejo": "Sueñen en grande. No están solxs. Este espacio es para crear redes y soñar en colectivo. Establezcan objetivos claros, pero también déjense llevar por el camino. Abran los ojos para identificar los retos, acérquense a sus amistades para hacerles frente y no dejen de luchar, porque su causa es importante.",
+      "territorios": [
+        "Iztapalapa",
+        "Xochimilco"
+      ],
+      "redes": [
+        {
+          "tipo": "facebook",
+          "url": "https://www.facebook.com/decidirmx"
+        },
+        {
+          "tipo": "instagram",
+          "url": "https://www.instagram.com/decidir_mx?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw=="
+        }
+      ],
+      "media": {
+        "logo": "/assets-images/proyectos/decidir-mx/logo.png",
+        "galeria": [
+          "/assets-images/proyectos/decidir-mx/galeria-1.webp",
+          "/assets-images/proyectos/decidir-mx/galeria-2.webp",
+          "/assets-images/proyectos/decidir-mx/galeria-3.webp",
+          "/assets-images/proyectos/decidir-mx/galeria-4.webp",
+          "/assets-images/proyectos/decidir-mx/galeria-5.webp",
+          "/assets-images/proyectos/decidir-mx/galeria-6.webp",
+          "/assets-images/proyectos/decidir-mx/galeria-7.webp"
+        ]
+      },
+      "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados",
+      "vistaGaleria": "carrusel"
+    },
+    {
+      "slug": "air-trans",
+      "nombre": "AIR Trans",
+      "tema": "Derechos trans",
+      "estado": "piloto",
+      "resumen": "AIR Trans trabaja por la dignidad y el respeto de las vidas trans a lo largo de América Latina. Con 8 talleres en 4 escuelas y 8 grupos focales de adolescentes formados en Iztapalapa, alcanzó directamente a 300 jóvenes y llevó su trabajo hacia un enfoque más comunitario y territorial.",
+      "pasoPorVyA": "Entré a Voces y Agentes con bajas expectativas, estaba acostumbrada a cursos, talleres y residencias que no dejaran muchos aprendizajes y solo me sirvieran para tener otra constancia. Sin embargo, encontré a un equipo lleno de vida, iniciativa y nuevas metodologías de educación que cambiaron mi perspectiva. Lo más importante que me llevo es el pensamiento de que la incidencia no tiene que ser aburrida y burocrática, puede ser algo más humano y divertido.",
+      "adaptacion": "Después de Voces y Agentes comencé a organizarme de forma más personal con mi colectivo, intentamos trabajar las narrativas, propuestas y trabajos con una perspectiva nueva, a la hora de intentar transmitir conocimiento ahora me importa más construirlo comunitariamente antes que imponerlo.",
+      "liderazgo": "Las herramientas que aprendí y lo que observé durante las sesiones y de las personas que me acompañan me hicieron darme cuenta de mis fortalezas y debilidades. Ahora intento mejorar mi gestión sin absorber toda la carga de trabajo yo, ejerciendo el autocuidado.",
+      "cifras": [
+        {
+          "valor": "300",
+          "label": "jóvenes directas"
+        },
+        {
+          "valor": "8",
+          "label": "talleres impartidos"
+        },
+        {
+          "valor": "4",
+          "label": "escuelas participantes"
+        },
+        {
+          "valor": "8",
+          "label": "grupos focales de adolescentes formados"
+        }
+      ],
+      "testimonio": {
+        "texto": "Reclamando los espacios que habitamos como personas trans y revalorizando la dignidad y respeto de nuestras vidas a lo largo de América Latina",
+        "autor": "Lisa Cecilia, gestora de políticas internacionales"
+      },
+      "consejo": "Pongan mucha atención, de esto pueden sacar muchas herramientas. Convivan mucho y hagan amistades.",
+      "territorios": [
+        "Iztapalapa"
+      ],
+      "redes": [
+        {
+          "tipo": "instagram",
+          "url": "https://www.instagram.com/a.i.r.trans?igsi=ZHpzOHkzZTEwdnE3"
+        }
+      ],
+      "media": {
+        "logo": "/assets-images/proyectos/air-trans/logo.png",
+        "galeria": [
+          "/assets-images/proyectos/air-trans/galeria-1.webp",
+          "/assets-images/proyectos/air-trans/galeria-2.webp",
+          "/assets-images/proyectos/air-trans/galeria-3.webp",
+          "/assets-images/proyectos/air-trans/galeria-4.webp"
+        ]
+      },
+      "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados"
+    }
+  ]
+}
