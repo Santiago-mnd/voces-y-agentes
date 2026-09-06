@@ -8,6 +8,16 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Ligema';
+  src: url('./assets/fonts/Ligema.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.font-fuega {
+  font-family: 'Ligema', sans-serif;
+}
 @theme {
   --color-surface: #f4f1e8;
   --color-primary: #df2626;
@@ -138,7 +148,7 @@ body {
   border-radius: inherit;
   background: #545454;
   opacity: 0.2;
-  transform: translate3d(7px, 9px, 0);
+  transform: translate3d(5px, 7px, 0);
   transition:
     transform 260ms var(--ease-settle),
     opacity 180ms linear;
@@ -149,8 +159,25 @@ body {
    al cerrar, vuelve a asentarse */
 .cycle-card:has(.flip-card-inner.is-active)::before {
   opacity: 0.12;
-  transform: translate3d(10px, 14px, 0) scale(1.01);
+  transform: translate3d(8px, 11px, 0) scale(1.01);
   transition-duration: 520ms;
+}
+
+/* Panel de lectura: papel crema sobre el color del ciclo.
+   Rota con el contenido (misma geometría), recorta con clip-path
+   en vez de overflow (que mataría el tilt del cartel). */
+.card-panel {
+  background: var(--color-surface);
+  color: var(--color-neutral);
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+
+/* Chip de acción: etiqueta de papel, siempre legible */
+.card-chip {
+  background: var(--color-neutral);
+  color: var(--color-surface);
+  padding: 0.4rem 0.8rem;
+  border-radius: 2px;
 }
 
 /* Anillo de foco: dibujado alrededor de la tarjeta, solo aparece con teclado */
@@ -310,7 +337,7 @@ body {
 
 .flip-card-inner {
   position: relative;
-  min-height: 260px;
+  min-height: 300px;
   transform-style: preserve-3d;
   transform-origin: 50% 52%;
   transform: rotateY(0deg);

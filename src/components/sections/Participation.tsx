@@ -64,7 +64,14 @@ interface CycleCardProps {
   onToggle: () => void;
 }
 
-function CycleCard({ cycle, isActive, onToggle }: CycleCardProps) {
+interface CycleCardProps {
+  cycle: Cycle;
+  index: number;
+  isActive: boolean;
+  onToggle: () => void;
+}
+
+function CycleCard({ cycle, index, isActive, onToggle }: CycleCardProps) {
   return (
     <Card className="cycle-card flip-card cursor-pointer">
       <button
@@ -74,32 +81,30 @@ function CycleCard({ cycle, isActive, onToggle }: CycleCardProps) {
         className="w-full h-full cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-surface/70"
       >
         <div className={`flip-card-inner ${isActive ? 'is-active' : ''}`}>
-          <div className={`flip-card-face flip-card-front ${cycle.color} p-8 h-full flex flex-col relative`}>
-            <div className="flip-card-content h-full flex flex-col gap-4">
-              <span className="cycle-card__title font-heading text-3xl tracking-wide block">{cycle.title}</span>
-              <p className="font-body text-lg leading-relaxed flex-1">{cycle.description}</p>
-              <span className="cycle-card__hint font-body text-xs uppercase tracking-[0.4em] opacity-80">
-                {isActive ? 'Pulsa para volver' : (
-                  <>
-                    <span className="hidden md:inline">Clic para ver más</span>
-                    <span className="md:hidden">Toca para ver más</span>
-                  </>
-                )}
+          <div className={`flip-card-face flip-card-front ${cycle.color} p-6 h-full flex flex-col relative`}>
+            <div className="flip-card-content card-panel h-full flex flex-col gap-3 text-left p-5">
+              <span className="cycle-card__title font-heading text-[1.5rem] leading-tight block">{cycle.title}</span>
+              <p className="font-body text-base leading-relaxed flex-1">{cycle.description}</p>
+              <span className="cycle-card__hint card-chip self-start font-body text-xs font-bold uppercase tracking-[0.2em]">
+                {isActive ? 'Volver al ciclo →' : 'Ver temas →'}
               </span>
             </div>
           </div>
-          <div className={`flip-card-face flip-card-back ${cycle.color} p-8 h-full flex flex-col relative`}>
-            <div className="flip-card-content h-full flex flex-col gap-4">
-              <p className="font-heading text-2xl">Temas clave</p>
-              <ul className="space-y-3 font-body text-base leading-relaxed">
+          <div className={`flip-card-face flip-card-back ${cycle.color} p-6 h-full flex flex-col relative`}>
+            <div className="flip-card-content card-panel h-full flex flex-col gap-3 text-left p-5">
+              <span className="font-heading text-sm tracking-[0.25em] uppercase opacity-70">{String(index + 1).padStart(2, '0')} · {cycle.title}</span>
+              <p className="font-heading text-2xl leading-tight">Temas clave</p>
+              <ul className="space-y-2.5 font-body text-base leading-relaxed flex-1">
                 {cycle.topics.map((topic) => (
                   <li key={topic} className="flex gap-3">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-surface/80 flex-none" aria-hidden></span>
+                    <span className="mt-2 h-2 w-2 rounded-full bg-neutral/60 flex-none" aria-hidden></span>
                     <span>{topic}</span>
                   </li>
                 ))}
               </ul>
-              <span className="font-body text-xs uppercase tracking-[0.4em] opacity-80 mt-auto">Pulsa para volver</span>
+              <span className="card-chip self-start font-body text-xs font-bold uppercase tracking-[0.2em]">
+                Volver al ciclo →
+              </span>
             </div>
           </div>
         </div>
@@ -136,6 +141,7 @@ export function Participation() {
             <CycleCard
               key={cycle.title}
               cycle={cycle}
+              index={index}
               isActive={activeCycle === index}
               onToggle={() => handleToggle(index)}
             />
@@ -161,12 +167,15 @@ export function Participation() {
           <div className="bg-accent text-surface p-10 flex flex-col justify-between">
             <div className="space-y-4">
               <p className="font-heading uppercase tracking-[0.4em] text-sm text-surface">Capital Semilla</p>
-              <h3 className="font-heading text-4xl leading-tight">Hasta ~$500 USD vía Youth Innovation Fund</h3>
+              <div>
+                <h3 className="font-heading text-5xl leading-[0.95]">Hasta <span className="whitespace-nowrap">~$500 USD</span></h3>
+                <p className="font-body text-lg font-bold uppercase tracking-[0.15em] mt-3 text-surface">vía Youth Innovation Fund</p>
+              </div>
               <p className="font-body text-lg text-surface/80">
                 Cubre la asistencia mínima, valida tu propuesta y accede al fondo para impulsar tu célula de incidencia.
               </p>
             </div>
-            <a href="#calendario" className="inline-flex mt-8 items-center justify-center w-full font-body px-6 py-3 transition-opacity duration-200 font-extrabold text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary cursor-pointer bg-primary-soft text-surface hover:opacity-90">
+            <a href="#calendario" className="inline-flex mt-8 items-center justify-center w-full font-body px-6 py-3 transition-opacity duration-200 font-extrabold text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary cursor-pointer bg-secondary text-surface hover:opacity-90">
               Ver calendario
             </a>
           </div>
