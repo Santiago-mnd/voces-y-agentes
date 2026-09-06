@@ -229,6 +229,72 @@
       },
       "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados",
       "vistaGaleria": "carrusel"
+    },
+    {
+      "slug": "ecatepec-en-bici",
+      "nombre": "Ecatepec en Bici",
+      "tema": "Movilidad ciclista y comunidad",
+      "estado": "piloto",
+      "resumen": "Ecatepec en Bici impulsa otras formas de movilidad en el municipio a través de la BiciFeria Comunitaria: una rodada abierta por Ecatepec, talleres de reparación y espacios de encuentro que integraron a ciclistas y vecinos de todas las edades alrededor de una Red Comunitaria de Ciclistas.",
+      "pasoPorVyA": "Formar parte de Voces y Agentes fue una oportunidad para profesionalizar su activismo a través del laboratorio y el acompañamiento del grupo asesor, además de obtener recursos para impulsar sus acciones en territorio. El espacio de colaboración les permitió conocer a otras colectivas y personas de Ecatepec, y contemplar nuevas alianzas.",
+      "adaptacion": "La herramienta de mayor impacto fue el storytelling: los memes que crearon para llegar a las y los jóvenes de Ecatepec fueron transcendental en la etapa de convocatoria. Esa reflexión sobre la transformación del territorio los llevó, idea tras idea, hasta la BiciFeria Comunitaria y los espacios que la componen.",
+      "liderazgo": "El liderazgo individual se potenció al ser seleccionados para el financiamiento: compartieron la noticia con el colectivo y cada quien participó desde sus talentos. Como colectiva, al implementar la BiciFeria se percibieron como un grupo ciclista líder en Ecatepec, con propuestas innovadoras de movilidad y apropiación del espacio público.",
+      "cifras": [
+        {
+          "valor": "28",
+          "label": "jóvenes impactados/as"
+        },
+        {
+          "valor": "80",
+          "label": "personas en la rodada"
+        },
+        {
+          "valor": "1",
+          "label": "BiciFeria Comunitaria"
+        },
+        {
+          "valor": "1",
+          "label": "red comunitaria de ciclistas"
+        }
+      ],
+      "testimonio": {
+        "texto": "Me encantó, muchas gracias, ya no tengo miedo a parchar mi bici",
+        "autor": "Participante del taller de reparación de ponchaduras"
+      },
+      "consejo": "Saca el máximo provecho a esta oportunidad de formación y profesionalización del activismo que necesita tu entorno. Haz redes durante el laboratorio: esto es solo el inicio del camino hacia la transformación de tu comunidad, y eso solo se logra en colectivo.",
+      "territorios": [
+        "Ecatepec"
+      ],
+      "redes": [
+        {
+          "tipo": "facebook",
+          "url": "https://www.facebook.com/share/1L5D9WuQit/"
+        },
+        {
+          "tipo": "instagram",
+          "url": "https://www.instagram.com/ecatepecenbici"
+        },
+        {
+          "tipo": "tiktok",
+          "url": "https://www.tiktok.com/@ecatepecenbici"
+        }
+      ],
+      "media": {
+        "logo": "/assets-images/proyectos/ecatepec-en-bici/logo.png",
+        "galeria": [
+          "/assets-images/proyectos/ecatepec-en-bici/galeria-1.webp",
+          "/assets-images/proyectos/ecatepec-en-bici/galeria-2.webp",
+          "/assets-images/proyectos/ecatepec-en-bici/galeria-3.webp",
+          "/assets-images/proyectos/ecatepec-en-bici/galeria-4.webp",
+          "/assets-images/proyectos/ecatepec-en-bici/galeria-5.webp",
+          "/assets-images/proyectos/ecatepec-en-bici/galeria-6.webp",
+          "/assets-images/proyectos/ecatepec-en-bici/galeria-7.webp",
+          "/assets-images/proyectos/ecatepec-en-bici/galeria-8.webp",
+          "/assets-images/proyectos/ecatepec-en-bici/galeria-9.webp"
+        ]
+      },
+      "vistaGaleria": "carrusel",
+      "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados"
     }
   ]
 }
