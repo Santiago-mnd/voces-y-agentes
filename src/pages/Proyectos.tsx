@@ -58,7 +58,7 @@ export function Proyectos() {
               <div className="p-6 flex flex-col gap-4">
                 <div className="flex items-start justify-between">
                   {p.media?.logo ? (
-                    <img src={p.media.logo} alt={`Logo de ${p.nombre}`} className="h-16 w-auto" />
+                    <img src={p.media.logo} alt={`Logo de ${p.nombre}`} className="max-h-16 w-16 object-contain" />
                   ) : (
                     <div className={`${MONO_BG[i % MONO_BG.length]} h-16 w-16 flex items-center justify-center font-heading text-2xl text-surface uppercase rotate-[-4deg]`}>
                       {iniciales(p.nombre)}

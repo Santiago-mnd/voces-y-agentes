@@ -61,7 +61,9 @@ export function ProyectoDetalle() {
 
         <div className="flex flex-col md:flex-row md:items-center gap-6 mt-10 mb-12">
           {p.media?.logo ? (
-            <img src={p.media.logo} alt={`Logo de ${p.nombre}`} className="h-24 w-auto" />
+            <div className="h-24 w-24 flex items-center justify-center flex-none bg-surface border border-neutral/10 p-2">
+              <img src={p.media.logo} alt={`Logo de ${p.nombre}`} className="max-h-full max-w-full object-contain" />
+            </div>
           ) : (
             <div className="bg-accent h-24 w-24 flex items-center justify-center font-heading text-4xl text-surface uppercase rotate-[-4deg] flex-none">
               {iniciales(p.nombre)}
