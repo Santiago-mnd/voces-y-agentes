@@ -61,11 +61,7 @@
       ],
       "media": {
         "logo": "/assets-images/proyectos/fuega-autodefensa/logo.png",
-        "galeria": [
-          "/assets-images/proyectos/fuega-autodefensa/ilustracion.jpg",
-          "/assets-images/proyectos/fuega-autodefensa/circulo-mujer.png",
-          "/assets-images/proyectos/fuega-autodefensa/sublogo-circular.png"
-        ]
+        "galeria": []
       },
       "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados",
       "vistaGaleria": "carrusel"
