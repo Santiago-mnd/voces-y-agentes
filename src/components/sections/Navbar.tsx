@@ -106,23 +106,30 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile/tablet menu */}
-      {menuOpen && (
-        <div ref={menuRef} id="mobile-menu" className="lg:hidden bg-surface border-t border-neutral/20 px-6 py-5" aria-label={'Men\u00FA de navegaci\u00F3n'}>
+      {/* Mobile/tablet menu: despliegue con recorte + escalonado de enlaces */}
+      <div
+        ref={menuRef}
+        id="mobile-menu"
+        aria-label={'Men\u00FA de navegaci\u00F3n'}
+        className={`lg:hidden bg-surface border-t border-neutral/20 px-6 py-5 ${menuOpen ? 'menu-panel is-open' : 'menu-panel'}`}
+        aria-hidden={!menuOpen}
+      >
+        {menuOpen && (
           <div className="flex flex-col gap-y-5">
-            {links.map((link) => (
+            {links.map((link, i) => (
               <Link
                 key={link.name}
                 to={link.href}
                 onClick={() => handleLinkClick(link)}
-                className="font-body text-base font-extrabold text-neutral hover:text-primary uppercase tracking-wide transition-colors"
+                className="menu-link font-body text-base font-extrabold text-neutral hover:text-primary uppercase tracking-wide transition-colors"
+                style={{ '--stagger': `${i * 45}ms` } as React.CSSProperties}
               >
                 {link.name}
               </Link>
             ))}
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </nav>
   );
 }

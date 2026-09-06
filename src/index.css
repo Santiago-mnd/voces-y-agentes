@@ -180,6 +180,51 @@ body {
   border-radius: 2px;
 }
 
+/* Menú móvil: panel que se despliega (clip + slide) y enlaces escalonados */
+.menu-panel {
+  overflow: hidden;
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-top-width: 0;
+  transition:
+    max-height 380ms var(--ease-settle, cubic-bezier(0.22, 1, 0.36, 1)),
+    padding 300ms var(--ease-settle, cubic-bezier(0.22, 1, 0.36, 1)),
+    border-top-width 300ms;
+}
+.menu-panel.is-open {
+  max-height: 480px;
+}
+.menu-link {
+  opacity: 0;
+  transform: translateX(-14px);
+}
+.menu-panel.is-open .menu-link {
+  animation: menu-link-in 340ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: var(--stagger, 0ms);
+}
+@keyframes menu-link-in {
+  from {
+    opacity: 0;
+    transform: translateX(-14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .menu-panel,
+  .menu-panel.is-open {
+    transition: none;
+  }
+  .menu-link {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
 /* Anillo de foco: dibujado alrededor de la tarjeta, solo aparece con teclado */
 .cycle-card::after {
   content: "";
