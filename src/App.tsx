@@ -20,7 +20,7 @@ function App() {
           Saltar al contenido principal
         </a>
         <Navbar />
-        <main id="main-content" className="grow relative">
+        <main id="main-content" className="grow relative animate-page-in">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/nuestros-antecedentes" element={<NuestrosAntecedentes />} />
