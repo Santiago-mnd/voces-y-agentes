@@ -62,42 +62,45 @@ interface CycleCardProps {
   cycle: Cycle;
   isActive: boolean;
   onToggle: () => void;
-  tiltClass: string;
 }
 
-function CycleCard({ cycle, isActive, onToggle, tiltClass }: CycleCardProps) {
+function CycleCard({ cycle, isActive, onToggle }: CycleCardProps) {
   return (
-    <Card className={`flip-card cursor-pointer ${isActive ? '' : `cycle-card ${tiltClass}`} ${cycle.color}`}>
+    <Card className="cycle-card flip-card cursor-pointer">
       <button
         type="button"
         onClick={onToggle}
         aria-expanded={isActive}
-        className={`w-full h-full cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-surface/70 transition-transform duration-300 ${isActive ? 'scale-[1.02]' : 'md:hover:-translate-y-1'}`}
+        className="w-full h-full cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-surface/70"
       >
         <div className={`flip-card-inner ${isActive ? 'is-active' : ''}`}>
-          <div className="flip-card-face flip-card-front p-8 h-full flex flex-col gap-4 relative">
-            <span className="font-heading text-3xl tracking-wide block">{cycle.title}</span>
-            <p className="font-body text-lg leading-relaxed flex-1">{cycle.description}</p>
-            <span className="font-body text-xs uppercase tracking-[0.4em] opacity-80">
-              {isActive ? 'Pulsa para volver' : (
-                <>
-                  <span className="hidden md:inline">Clic para ver más</span>
-                  <span className="md:hidden">Toca para ver más</span>
-                </>
-              )}
-            </span>
+          <div className={`flip-card-face flip-card-front ${cycle.color} p-8 h-full flex flex-col relative`}>
+            <div className="flip-card-content h-full flex flex-col gap-4">
+              <span className="cycle-card__title font-heading text-3xl tracking-wide block">{cycle.title}</span>
+              <p className="font-body text-lg leading-relaxed flex-1">{cycle.description}</p>
+              <span className="cycle-card__hint font-body text-xs uppercase tracking-[0.4em] opacity-80">
+                {isActive ? 'Pulsa para volver' : (
+                  <>
+                    <span className="hidden md:inline">Clic para ver más</span>
+                    <span className="md:hidden">Toca para ver más</span>
+                  </>
+                )}
+              </span>
+            </div>
           </div>
-          <div className="flip-card-face flip-card-back p-8 h-full flex flex-col gap-4 relative">
-            <p className="font-heading text-2xl">Temas clave</p>
-            <ul className="space-y-3 font-body text-base leading-relaxed">
-              {cycle.topics.map((topic) => (
-                <li key={topic} className="flex gap-3">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-surface/80 flex-none" aria-hidden></span>
-                  <span>{topic}</span>
-                </li>
-              ))}
-            </ul>
-            <span className="font-body text-xs uppercase tracking-[0.4em] opacity-80 mt-auto">Pulsa para volver</span>
+          <div className={`flip-card-face flip-card-back ${cycle.color} p-8 h-full flex flex-col relative`}>
+            <div className="flip-card-content h-full flex flex-col gap-4">
+              <p className="font-heading text-2xl">Temas clave</p>
+              <ul className="space-y-3 font-body text-base leading-relaxed">
+                {cycle.topics.map((topic) => (
+                  <li key={topic} className="flex gap-3">
+                    <span className="mt-1 h-2 w-2 rounded-full bg-surface/80 flex-none" aria-hidden></span>
+                    <span>{topic}</span>
+                  </li>
+                ))}
+              </ul>
+              <span className="font-body text-xs uppercase tracking-[0.4em] opacity-80 mt-auto">Pulsa para volver</span>
+            </div>
           </div>
         </div>
       </button>
@@ -128,12 +131,11 @@ export function Participation() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+        <div className="cycles-grid motion-ready grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
           {cycles.map((cycle, index) => (
             <CycleCard
               key={cycle.title}
               cycle={cycle}
-              tiltClass={index % 2 === 0 ? 'cycle-card--tilt-left' : 'cycle-card--tilt-right'}
               isActive={activeCycle === index}
               onToggle={() => handleToggle(index)}
             />
