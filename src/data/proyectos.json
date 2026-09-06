@@ -123,7 +123,13 @@
       ],
       "media": {
         "logo": null,
-        "galeria": []
+        "galeria": [
+          "/assets-images/proyectos/colectiva-moms/galeria-1.webp",
+          "/assets-images/proyectos/colectiva-moms/galeria-2.webp",
+          "/assets-images/proyectos/colectiva-moms/galeria-3.webp",
+          "/assets-images/proyectos/colectiva-moms/galeria-4.webp",
+          "/assets-images/proyectos/colectiva-moms/galeria-5.webp"
+        ]
       },
       "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados",
       "vistaGaleria": "carrusel"
