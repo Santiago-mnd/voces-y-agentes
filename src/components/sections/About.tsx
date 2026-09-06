@@ -40,11 +40,20 @@ export function About() {
             </div>
             {/* Polaroid: rota al contrario del fondo */}
             <div className="relative z-10 bg-white p-3 pb-10 shadow-xl w-4/5 rotate-3">
-              <img
-                src={gaj55}
-                alt="Foto del equipo Voces y Agentes"
-                className="w-full object-cover"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet="/assets-images/GAJ-53-960.webp 960w, /assets-images/GAJ-53-1440.webp 1440w"
+                  sizes="(min-width: 1024px) 40vw, 90vw"
+                />
+                <img
+                  src={gaj55}
+                  alt="Foto del equipo Voces y Agentes"
+                  className="w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
               {/* Caption del polaroid */}
               <p className="font-heading text-neutral/50 text-xs uppercase tracking-[0.3em] text-center mt-5">
                 Grupo asesor de jóvenes

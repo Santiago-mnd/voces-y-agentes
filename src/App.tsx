@@ -1,9 +1,9 @@
-﻿import { BrowserRouter, Routes, Route } from 'react-router';
+import { BrowserRouter, Routes, Route } from 'react-router';
 import { Navbar } from './components/sections/Navbar';
 import { Footer } from './components/sections/Footer';
 import { Home } from './pages/Home';
-import { Requisitos } from './pages/Requisitos';
 import { NuestrosAntecedentes } from './pages/NuestrosAntecedentes';
+import { NotFound } from './pages/NotFound';
 
 function App() {
   return (
@@ -19,8 +19,8 @@ function App() {
         <main id="main-content" className="grow relative">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/requisitos" element={<Requisitos />} />
             <Route path="/nuestros-antecedentes" element={<NuestrosAntecedentes />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

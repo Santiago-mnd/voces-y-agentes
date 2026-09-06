@@ -1,4 +1,4 @@
-﻿import type { CSSProperties, ReactNode } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
 import { useEffect } from 'react';
 import { usePostHog } from '@posthog/react';
 import { useInView } from '../../hooks/useInView';
@@ -32,8 +32,9 @@ export function SectionWrapper({
   const { ref, isVisible } = useInView();
 
   useEffect(() => {
-    if (isVisible) posthog.capture('section_viewed', { section: id });
-  }, [isVisible]);
+    if (!isVisible || !posthog) return;
+    posthog.capture('section_viewed', { section: id });
+  }, [isVisible, id, posthog]);
 
   const diagonalClasses = diagonal ? 'section-diagonal section-diagonal-' + diagonal : '';
   const sectionClasses = (diagonal ? 'relative ' : '') + paddingClass + ' ' + diagonalClasses + ' ' + className;

@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router';
 import { usePostHog } from '@posthog/react';
 
@@ -21,6 +21,7 @@ export function Navbar() {
   const handleLinkClick = (link: { name: string; href: string }) => {
     posthog.capture('navbar_click', { section: link.name, destination: link.href });
     setMenuOpen(false);
+    hamburgerRef.current?.focus();
   };
 
   useEffect(() => {

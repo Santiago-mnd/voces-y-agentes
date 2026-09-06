@@ -285,7 +285,7 @@ export function NuestrosAntecedentes() {
                 Objetivo: Innovación con Sentido Humano
               </h3>
               <p className="font-body text-lg text-surface leading-relaxed">
-                Buscamos financiar y acompañar técnicamente hasta 9 iniciativas juveniles que propongan soluciones creativas a problemáticas sociales, fomentando la cultura de paz, el trabajo digno y el ejercicio de derechos.
+                Buscamos financiar y acompañar técnicamente 10 proyectos juveniles en total que propongan soluciones creativas a problemáticas sociales, fomentando la cultura de paz, el trabajo digno y el ejercicio de derechos.
               </p>
             </div>
             <div className="bg-surface p-8 space-y-6">

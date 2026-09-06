@@ -1,6 +1,5 @@
-﻿import { Link } from 'react-router';
+import { Link } from 'react-router';
 import faceLogo from '../../assets/face.svg';
-import { Button } from '../ui/Button';
 import { useInView } from '../../hooks/useInView';
 
 export function Hero() {
@@ -22,11 +21,11 @@ export function Hero() {
               Voces y Agentes — VyA es el laboratorio juvenil de GOYN México que acompaña a jóvenes oportunidad de Iztapalapa, Cuauhtémoc y Ecatepec para transformar su voluntariado barrial en incidencia política estratégica. Nuestro modelo, basado en el Programa de Liderazgo para la Equidad (Equity Leadership Program — ELP), integra formación híbrida, cuidados colectivos y capital semilla.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start mt-6">
-              <a href="#calendario" className="w-full sm:w-auto">
-                <Button variant="primary" fullWidth className="sm:w-auto bg-primary-soft! text-surface!">Ver calendario</Button>
+              <a href="#calendario" className="inline-flex w-full sm:w-auto items-center justify-center font-body px-6 py-3 transition-opacity duration-200 font-extrabold text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary cursor-pointer bg-primary text-surface hover:opacity-90">
+                Ver calendario
               </a>
-              <Link to="/nuestros-antecedentes" className="w-full sm:w-auto">
-                <Button variant="primary" fullWidth className="sm:w-auto bg-secondary! text-surface!">Conoce nuestros antecedentes</Button>
+              <Link to="/nuestros-antecedentes" className="inline-flex w-full sm:w-auto items-center justify-center font-body px-6 py-3 transition-opacity duration-200 font-extrabold text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary cursor-pointer bg-secondary text-surface hover:opacity-90">
+                Conoce nuestros antecedentes
               </Link>
             </div>
           </div>

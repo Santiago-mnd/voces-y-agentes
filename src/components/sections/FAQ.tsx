@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { usePostHog } from '@posthog/react';
 import { SectionWrapper } from '../ui/SectionWrapper';
 import { InteractiveDecoration } from '../ui/InteractiveDecoration';
@@ -21,7 +21,7 @@ const faqs = [
   {
     question: '¿Cuánto dura el proceso?',
     answer:
-      'Son 12 módulos formativos (T0–T11) en formato híbrido: sesiones presenciales en tu demarcación y refuerzos en línea.'
+      'Son 8 módulos híbridos: sesiones presenciales en tu demarcación y refuerzos en línea.'
   },
   {
     question: '¿Necesito llegar con un colectivo armado?',

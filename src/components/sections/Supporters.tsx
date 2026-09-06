@@ -1,4 +1,4 @@
-﻿import { SectionWrapper } from '../ui/SectionWrapper';
+import { SectionWrapper } from '../ui/SectionWrapper';
 import goynLogo from '../../assets/goyn.webp';
 import juventudesLogo from '../../assets/logo-juventudes.svg';
 

@@ -1,7 +1,6 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { SectionWrapper } from '../ui/SectionWrapper';
 import { Card } from '../ui/Card';
-import { Button } from '../ui/Button';
 import { InteractiveDecoration } from '../ui/InteractiveDecoration';
 import deco3 from '../../assets/decorations/03.svg';
 
@@ -165,10 +164,8 @@ export function Participation() {
                 Cubre la asistencia mínima, valida tu propuesta y accede al fondo para impulsar tu célula de incidencia.
               </p>
             </div>
-            <a href="#registro" className="block mt-8">
-              <Button variant="primary" fullWidth className="!bg-primary-soft !text-surface">
-                Ver calendario y registrarme
-              </Button>
+            <a href="#calendario" className="inline-flex mt-8 items-center justify-center w-full font-body px-6 py-3 transition-opacity duration-200 font-extrabold text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary cursor-pointer bg-primary-soft text-surface hover:opacity-90">
+              Ver calendario
             </a>
           </div>
         </div>

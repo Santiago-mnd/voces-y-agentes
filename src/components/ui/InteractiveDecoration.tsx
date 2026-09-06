@@ -22,11 +22,12 @@ export function InteractiveDecoration({ src, className = '', alt = '' }: Interac
   return (
     <button
       type="button"
+      tabIndex={-1}
+      aria-hidden="true"
       className={`${safeClassName} transition-transform duration-500 ease-out motion-reduce:transition-none cursor-pointer hover:scale-110 bg-transparent border-none p-0`}
       onClick={handleClick}
-      aria-label="Decoración interactiva"
       style={{
-        transform: `translate(${pos.x}px, ${pos.y}px) rotate(calc(var(--tw-rotate, 0deg) + ${pos.rotation}deg)) scale(var(--tw-scale-x, 1), var(--tw-scale-y, 1))`
+        transform: `translate(${pos.x}px, ${pos.y}px) rotate(${pos.rotation}deg)`
       }}
     >
       <img src={src} alt={alt} className="w-full h-full object-contain pointer-events-none" />
