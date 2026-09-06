@@ -114,7 +114,7 @@ export function Navbar() {
         className={`lg:hidden bg-surface border-t border-neutral/20 px-6 py-5 ${menuOpen ? 'menu-panel is-open' : 'menu-panel'}`}
         aria-hidden={!menuOpen}
       >
-        {menuOpen && (
+        {(
           <div className="flex flex-col gap-y-5">
             {links.map((link, i) => (
               <Link
@@ -123,6 +123,7 @@ export function Navbar() {
                 onClick={() => handleLinkClick(link)}
                 className="menu-link font-body text-base font-extrabold text-neutral hover:text-primary uppercase tracking-wide transition-colors"
                 style={{ '--stagger': `${i * 45}ms` } as React.CSSProperties}
+                tabIndex={menuOpen ? undefined : -1}
               >
                 {link.name}
               </Link>
