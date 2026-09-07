@@ -388,6 +388,8 @@ body {
 
 .flip-card-inner {
   position: relative;
+  display: flex;
+  height: 100%;
   min-height: 300px;
   transform-style: preserve-3d;
   transform-origin: 50% 52%;
@@ -416,6 +418,9 @@ body {
 }
 
 .flip-card-back {
+  position: relative;
+  inset: auto;
+  width: 100%;
   transform: rotateY(180deg);
 }
 
