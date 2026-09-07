@@ -9,6 +9,16 @@ const options = {
   defaults: '2026-01-30',
 } as const
 
+const redirectTarget = sessionStorage.getItem('redirect')
+if (redirectTarget) {
+  sessionStorage.removeItem('redirect')
+  const target = new URL(redirectTarget)
+  const here = new URL(window.location.href)
+  if (target.origin === here.origin && target.pathname !== here.pathname) {
+    window.history.replaceState(null, '', target.pathname + target.search + target.hash)
+  }
+}
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <PostHogProvider apiKey={import.meta.env.VITE_PUBLIC_POSTHOG_KEY} options={options}>
