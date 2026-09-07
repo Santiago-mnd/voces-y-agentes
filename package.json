@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "prebuild": "node scripts/validate-proyectos.mjs",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && node scripts/prerender-routes.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
