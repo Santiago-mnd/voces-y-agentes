@@ -29,3 +29,6 @@ dist-ssr
 !.dev.vars.example
 .env*
 !.env.example
+
+# Fuentes de contenido del cliente: viven en el vault (privado), no aqui
+docs/blog-source/
