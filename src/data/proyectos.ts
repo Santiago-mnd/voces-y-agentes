@@ -44,7 +44,12 @@ export interface Proyecto {
   fuente: string;
 }
 
-export const proyectos: Proyecto[] = (raw as { proyectos: Proyecto[] }).proyectos;
+const collator = new Intl.Collator('es', { sensitivity: 'base', numeric: true });
+
+export const proyectos: Proyecto[] = [...(raw as { proyectos: Proyecto[] }).proyectos]
+  .sort((a, b) => collator.compare(a.nombre, b.nombre));
+
+export const proyectosInverso: Proyecto[] = [...proyectos].reverse();
 
 export const ESTADO_LABEL: Record<EstadoProyecto, string> = {
   'diseño': 'En diseño',

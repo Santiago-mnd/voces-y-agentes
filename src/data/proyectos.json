@@ -61,7 +61,15 @@
       ],
       "media": {
         "logo": "/assets-images/proyectos/fuega-autodefensa/logo.png",
-        "galeria": []
+        "galeria": [
+          "/assets-images/proyectos/fuega-autodefensa/galeria-1.webp",
+          "/assets-images/proyectos/fuega-autodefensa/galeria-2.webp",
+          "/assets-images/proyectos/fuega-autodefensa/galeria-3.webp",
+          "/assets-images/proyectos/fuega-autodefensa/galeria-4.webp",
+          "/assets-images/proyectos/fuega-autodefensa/galeria-5.webp",
+          "/assets-images/proyectos/fuega-autodefensa/galeria-6.webp",
+          "/assets-images/proyectos/fuega-autodefensa/galeria-7.webp"
+        ]
       },
       "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados",
       "vistaGaleria": "carrusel"
