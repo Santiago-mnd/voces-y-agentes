@@ -9,7 +9,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const file = join(root, 'src', 'data', 'proyectos.json');
 
 const ESTADOS = new Set(['diseño', 'piloto', 'en-marcha', 'finalizado']);
-const REDES = new Set(['instagram', 'tiktok', 'facebook', 'linkedin', 'web']);
+const REDES = new Set(['instagram', 'tiktok', 'facebook', 'youtube', 'linkedin', 'web']);
 
 const errors = [];
 let data;

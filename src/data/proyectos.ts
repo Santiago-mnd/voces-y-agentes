@@ -15,7 +15,7 @@ export interface ProyectoTestimonio {
 }
 
 export interface ProyectoRed {
-  tipo: 'instagram' | 'tiktok' | 'facebook' | 'linkedin' | 'web';
+  tipo: 'instagram' | 'tiktok' | 'facebook' | 'youtube' | 'linkedin' | 'web';
   url: string;
 }
 

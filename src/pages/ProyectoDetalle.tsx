@@ -10,6 +10,7 @@ const RED_LABEL: Record<string, string> = {
   instagram: 'Instagram',
   tiktok: 'TikTok',
   facebook: 'Facebook',
+  youtube: 'YouTube',
   linkedin: 'LinkedIn',
   web: 'Sitio web'
 };

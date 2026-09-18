@@ -309,6 +309,72 @@
       },
       "vistaGaleria": "carrusel",
       "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados"
+    },
+    {
+      "slug": "solitos-pero-acompanados",
+      "nombre": "Solitos pero Acompañados",
+      "tema": "Contenido audiovisual desde las periferias",
+      "estado": "en-marcha",
+      "resumen": "Solitos pero Acompañados hace contenido audiovisual desde las periferias. Con Voces de la Periferia, una miniserie de 3 episodios en YouTube acompañada de reels en TikTok, Instagram y Facebook, recorrieron Ecatepec, Atizapán y Nezahualcóyotl para preguntar a sus habitantes cómo perciben el arte y la cultura en su territorio.",
+      "pasoPorVyA": "El laboratorio les dio la alegría de encontrarse con personas que también trabajan en sus territorios y creen que el cambio es real. Ahí confirmaron que el activismo también se hace creando contenido para redes sociales y cine.",
+      "adaptacion": "Lo aprendido les sirvió primero para entenderse como equipo y para preguntar mejor cómo se siente la otra persona. También ordenó su organización y logística: muchas herramientas ya las aplicaban, pero ahora tienen estructura, y eso se tradujo en más tiempo para el autocuidado.",
+      "liderazgo": "El acompañamiento y el sostén de Voces y Agentes les confirmó que su trabajo importa para el colectivo, para su comunidad y para todas las personas que lo ven.",
+      "cifras": [
+        {
+          "valor": "331k",
+          "label": "vistas en redes"
+        },
+        {
+          "valor": "3",
+          "label": "episodios de Voces de la Periferia"
+        },
+        {
+          "valor": "3",
+          "label": "territorios recorridos"
+        }
+      ],
+      "testimonio": {
+        "texto": "Me gustó mucho la reflexión final; el desplazamiento de las masas en busca de oportunidades (sobre todo cuando se trata del arte) a veces también está motivada por la falta de información de los espacios culturales más asequibles. Creo que comprender lo que implica ser parte de un territorio, también fomenta que podamos ser partidarios de un ejercicio de poder que reconfigura la forma en la que participamos dentro del mismo, eso también podría ayudar a exigir la preservación, cuidado y desarrollo de los espacios culturales que están más a nuestro alcance. Buen episodio :)",
+        "autor": "Comentario en YouTube sobre el episodio de Ecatepec"
+      },
+      "consejo": "Involucrarte social y políticamente en tu territorio sí genera impacto, sí es productivo, sí es importante y sí es necesario.",
+      "territorios": [
+        "Ecatepec",
+        "Atizapán de Zaragoza",
+        "Nezahualcóyotl"
+      ],
+      "redes": [
+        {
+          "tipo": "youtube",
+          "url": "https://www.youtube.com/@solitosperoacompanados"
+        },
+        {
+          "tipo": "instagram",
+          "url": "https://www.instagram.com/solitosperoacompanados"
+        },
+        {
+          "tipo": "tiktok",
+          "url": "https://www.tiktok.com/@solitosperoacompanados"
+        },
+        {
+          "tipo": "facebook",
+          "url": "https://www.facebook.com/solitosperoacompanados"
+        }
+      ],
+      "media": {
+        "logo": "/assets-images/proyectos/solitos-pero-acompanados/logo.png",
+        "galeria": [
+          "/assets-images/proyectos/solitos-pero-acompanados/galeria-1.webp",
+          "/assets-images/proyectos/solitos-pero-acompanados/galeria-2.webp",
+          "/assets-images/proyectos/solitos-pero-acompanados/galeria-3.webp",
+          "/assets-images/proyectos/solitos-pero-acompanados/galeria-4.webp",
+          "/assets-images/proyectos/solitos-pero-acompanados/galeria-5.webp",
+          "/assets-images/proyectos/solitos-pero-acompanados/galeria-6.webp",
+          "/assets-images/proyectos/solitos-pero-acompanados/galeria-7.webp"
+        ]
+      },
+      "vistaGaleria": "carrusel",
+      "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados"
     }
   ]
 }
