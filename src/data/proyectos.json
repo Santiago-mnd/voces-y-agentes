@@ -375,6 +375,74 @@
       },
       "vistaGaleria": "carrusel",
       "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados"
+    },
+    {
+      "slug": "entramadas-al-horizonte",
+      "nombre": "Entramadas al Horizonte",
+      "tema": "Educación sexual y derechos",
+      "estado": "finalizado",
+      "resumen": "Entramadas al Horizonte llevó la educación sexual al kiosko de Ecatepec con la Feria EcatePregunta: folletería, libros didácticos, actividades lúdicas, insumos anticonceptivos, de placer y preventivos, y pruebas rápidas de VIH, sífilis y hepatitis C, en alianza con organizaciones de defensa de derechos humanos.",
+      "pasoPorVyA": "Para la colectiva, el laboratorio fue un espacio para resignificar la colectividad y el activismo. El acompañamiento les permitió conocer a otras juventudes comprometidas con generar espacios de cambio e incidencia. Además de la formación teórica y las estrategias metodológicas, ahí tejieron comunidad con otras juventudes y construyeron alianzas de esperanza.",
+      "adaptacion": "Adaptaron las herramientas del laboratorio a las necesidades de su territorio y comunidad, sobre todo para planear, difundir y evaluar la Feria. Incorporaron una mirada más participativa, flexible y comunitaria, que les permitió ajustar sus estrategias según lo que observaban durante el proceso y las experiencias de las juventudes y organizaciones participantes.",
+      "liderazgo": "El acompañamiento fortaleció sus herramientas de gestión y procuración de fondos, un eje clave para la colectiva, que busca seguir obteniendo recursos para sus actividades. También afinaron sus estrategias de comunicación para la incidencia, con contenido que acerca información verídica, científica y divertida a las juventudes. En lo colectivo, reconocieron sus habilidades y saberes y construyeron estrategias de sostenibilidad y cuidados, entre ellas, con la comunidad y con sus alianzas.",
+      "cifras": [
+        {
+          "valor": "20",
+          "label": "jóvenes directas"
+        },
+        {
+          "valor": "40",
+          "label": "beneficiarixs directos de la Feria EcatePregunta"
+        },
+        {
+          "valor": "30",
+          "label": "pruebas rápidas de VIH, sífilis y hepatitis aplicadas por SEIINAC"
+        },
+        {
+          "valor": "14",
+          "label": "asistentes al taller de encuadernación artesanal de Fuega Autodefensa"
+        },
+        {
+          "valor": "44.5k",
+          "label": "visualizaciones en Instagram durante la convocatoria"
+        },
+        {
+          "valor": "8",
+          "label": "alianzas con organizaciones de defensa de derechos humanos"
+        }
+      ],
+      "testimonio": {
+        "texto": "En la periferia hay muchas juventudes organizadas, donde hablar de salud sexual se vuelve más seguro",
+        "autor": "Participante de la Feria EcatePregunta"
+      },
+      "consejo": "En un mundo que nos quiere convencer de que no hay futuro, organizarnos, crear y accionar desde nuestra cotidianidad nos acerca a la esperanza, a horizontes de vida, cuidados y ternura.",
+      "territorios": [
+        "Ecatepec"
+      ],
+      "redes": [
+        {
+          "tipo": "instagram",
+          "url": "https://www.instagram.com/entramadasalhorizonte"
+        },
+        {
+          "tipo": "tiktok",
+          "url": "https://www.tiktok.com/@entramadashorizonte"
+        }
+      ],
+      "media": {
+        "logo": "/assets-images/proyectos/entramadas-al-horizonte/logo.png",
+        "galeria": [
+          "/assets-images/proyectos/entramadas-al-horizonte/galeria-1.webp",
+          "/assets-images/proyectos/entramadas-al-horizonte/galeria-2.webp",
+          "/assets-images/proyectos/entramadas-al-horizonte/galeria-3.webp",
+          "/assets-images/proyectos/entramadas-al-horizonte/galeria-4.webp",
+          "/assets-images/proyectos/entramadas-al-horizonte/galeria-5.webp",
+          "/assets-images/proyectos/entramadas-al-horizonte/galeria-6.webp",
+          "/assets-images/proyectos/entramadas-al-horizonte/galeria-7.webp"
+        ]
+      },
+      "vistaGaleria": "carrusel",
+      "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados"
     }
   ]
 }
