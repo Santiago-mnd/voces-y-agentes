@@ -47,7 +47,15 @@ for (const p of data.proyectos) {
     req(typeof c.label === 'string' && c.label.trim(), s, 'cifra.label');
   }
 
-  req(p.testimonio && typeof p.testimonio.texto === 'string' && p.testimonio.texto.trim(), s, 'testimonio.texto');
+  const testimonios = Array.isArray(p.testimonio) ? p.testimonio : [p.testimonio];
+  req(testimonios.length >= 1, s, 'testimonio (>=1)');
+  for (const t of testimonios) {
+    req(t && typeof t.texto === 'string' && t.texto.trim(), s, 'testimonio.texto');
+  }
+
+  for (const campo of ['alcance', 'ubicacion', 'acompanamiento', 'presencia', 'circulacion', 'resultados']) {
+    if (p[campo] !== undefined) req(typeof p[campo] === 'string' && p[campo].trim(), s, `${campo} (string no vacío)`);
+  }
 
   req(Array.isArray(p.territorios) && p.territorios.length >= 1, s, 'territorios (>=1)');
   req(typeof p.fuente === 'string' && p.fuente.trim(), s, 'fuente (citación obligatoria)');

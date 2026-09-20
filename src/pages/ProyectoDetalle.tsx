@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import { SectionWrapper } from '../components/ui/SectionWrapper';
 import { ProyectoGallery, ProyectoCarrusel } from '../components/ui/Gallery';
 import { setPageMeta } from '../lib/meta';
-import { proyectos, getProyecto, ESTADO_LABEL, iniciales } from '../data/proyectos';
+import { proyectos, getProyecto, testimoniosDe, ESTADO_LABEL, iniciales } from '../data/proyectos';
 
 const RED_LABEL: Record<string, string> = {
   instagram: 'Instagram',
@@ -14,6 +14,26 @@ const RED_LABEL: Record<string, string> = {
   linkedin: 'LinkedIn',
   web: 'Sitio web'
 };
+
+function Parrafos({ texto }: { texto: string }) {
+  const parrafos = texto.split(/\n{2,}/).map((t) => t.trim()).filter(Boolean);
+  return (
+    <div className="space-y-4">
+      {parrafos.map((t, i) => (
+        <p key={i} className="font-body text-lg text-neutral leading-relaxed">{t}</p>
+      ))}
+    </div>
+  );
+}
+
+function ProyectoSeccion({ titulo, texto }: { titulo: string; texto: string }) {
+  return (
+    <section>
+      <p className="font-heading text-sm uppercase tracking-[0.4em] text-secondary mb-4">{titulo}</p>
+      <Parrafos texto={texto} />
+    </section>
+  );
+}
 
 export function ProyectoDetalle() {
   const { slug } = useParams();
@@ -52,6 +72,7 @@ export function ProyectoDetalle() {
   }
 
   const otros = proyectos.filter((x) => x.slug !== p.slug);
+  const testimonios = testimoniosDe(p);
 
   return (
     <>
@@ -96,10 +117,7 @@ export function ProyectoDetalle() {
         )}
 
         <div className="max-w-3xl space-y-10">
-          <section>
-            <p className="font-heading text-sm uppercase tracking-[0.4em] text-secondary mb-4">El proyecto</p>
-            <p className="font-body text-lg text-neutral leading-relaxed">{p.resumen}</p>
-          </section>
+          <ProyectoSeccion titulo="El proyecto" texto={p.resumen} />
         </div>
 
         {p.media?.galeria && p.media.galeria.length > 0 && (
@@ -114,36 +132,32 @@ export function ProyectoDetalle() {
         )}
 
         <div className="max-w-3xl space-y-10 mt-14">
-          <section>
-            <p className="font-heading text-sm uppercase tracking-[0.4em] text-secondary mb-4">Su paso por Voces y Agentes</p>
-            <p className="font-body text-lg text-neutral leading-relaxed">{p.pasoPorVyA}</p>
-          </section>
+          <ProyectoSeccion titulo="Su paso por Voces y Agentes" texto={p.pasoPorVyA} />
 
-          {p.adaptacion && (
-            <section>
-              <p className="font-heading text-sm uppercase tracking-[0.4em] text-secondary mb-4">Adaptación e implementación</p>
-              <p className="font-body text-lg text-neutral leading-relaxed">{p.adaptacion}</p>
-            </section>
-          )}
+          {p.adaptacion && <ProyectoSeccion titulo="Adaptación e implementación" texto={p.adaptacion} />}
 
-          {p.liderazgo && (
-            <section>
-              <p className="font-heading text-sm uppercase tracking-[0.4em] text-secondary mb-4">Fortalecimiento del liderazgo</p>
-              <p className="font-body text-lg text-neutral leading-relaxed">{p.liderazgo}</p>
-            </section>
-          )}
+          {p.liderazgo && <ProyectoSeccion titulo="Fortalecimiento del liderazgo" texto={p.liderazgo} />}
 
-          <blockquote className="bg-accent/10 border-l-4 border-l-accent p-8">
-            <p className="font-heading text-2xl md:text-3xl text-neutral leading-snug">❝ {p.testimonio.texto} ❞</p>
-            {p.testimonio.autor && <cite className="font-body text-sm text-neutral/70 not-italic block mt-4">— {p.testimonio.autor}</cite>}
-          </blockquote>
+          {p.alcance && <ProyectoSeccion titulo="Alcance directo a jóvenes de 18 a 29 años" texto={p.alcance} />}
 
-          {p.consejo && (
-            <section>
-              <p className="font-heading text-sm uppercase tracking-[0.4em] text-secondary mb-4">Para la siguiente generación</p>
-              <p className="font-body text-lg text-neutral leading-relaxed">{p.consejo}</p>
-            </section>
-          )}
+          {p.ubicacion && <ProyectoSeccion titulo="Ubicación y territorios con presencia" texto={p.ubicacion} />}
+
+          {p.acompanamiento && <ProyectoSeccion titulo="De la formación al acompañamiento" texto={p.acompanamiento} />}
+
+          {p.presencia && <ProyectoSeccion titulo="Presencia comunitaria" texto={p.presencia} />}
+
+          {p.circulacion && <ProyectoSeccion titulo="Alcance y circulación en redes" texto={p.circulacion} />}
+
+          {p.resultados && <ProyectoSeccion titulo="Transformaciones y logros principales" texto={p.resultados} />}
+
+          {testimonios.map((t, i) => (
+            <blockquote key={i} className="bg-accent/10 border-l-4 border-l-accent p-8">
+              <p className="font-heading text-2xl md:text-3xl text-neutral leading-snug">❝ {t.texto} ❞</p>
+              {t.autor && <cite className="font-body text-sm text-neutral/70 not-italic block mt-4">— {t.autor}</cite>}
+            </blockquote>
+          ))}
+
+          {p.consejo && <ProyectoSeccion titulo="Para la siguiente generación" texto={p.consejo} />}
 
           {p.redes && p.redes.length > 0 && (
             <div className="flex flex-wrap gap-3">

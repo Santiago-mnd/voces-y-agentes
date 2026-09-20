@@ -34,8 +34,14 @@ export interface Proyecto {
   pasoPorVyA: string;
   adaptacion?: string;
   liderazgo?: string;
+  alcance?: string;
+  ubicacion?: string;
+  acompanamiento?: string;
+  presencia?: string;
+  circulacion?: string;
+  resultados?: string;
   cifras: ProyectoCifra[];
-  testimonio: ProyectoTestimonio;
+  testimonio: ProyectoTestimonio | ProyectoTestimonio[];
   consejo?: string;
   territorios: string[];
   redes?: ProyectoRed[];
@@ -60,6 +66,10 @@ export const ESTADO_LABEL: Record<EstadoProyecto, string> = {
 
 export function getProyecto(slug: string): Proyecto | undefined {
   return proyectos.find((p) => p.slug === slug);
+}
+
+export function testimoniosDe(proyecto: Proyecto): ProyectoTestimonio[] {
+  return Array.isArray(proyecto.testimonio) ? proyecto.testimonio : [proyecto.testimonio];
 }
 
 export function iniciales(nombre: string): string {
