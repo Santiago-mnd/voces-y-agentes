@@ -538,7 +538,26 @@
         }
       ],
       "media": {
-        "logo": "/assets-images/proyectos/michis-aborteros/logo.png"
+        "logo": "/assets-images/proyectos/michis-aborteros/logo.png",
+        "galeria": [
+          "/assets-images/proyectos/michis-aborteros/galeria-1.webp",
+          "/assets-images/proyectos/michis-aborteros/galeria-2.webp",
+          "/assets-images/proyectos/michis-aborteros/galeria-3.webp",
+          "/assets-images/proyectos/michis-aborteros/galeria-4.webp",
+          "/assets-images/proyectos/michis-aborteros/galeria-5.webp",
+          "/assets-images/proyectos/michis-aborteros/galeria-6.webp",
+          "/assets-images/proyectos/michis-aborteros/galeria-7.webp",
+          "/assets-images/proyectos/michis-aborteros/galeria-8.webp",
+          "/assets-images/proyectos/michis-aborteros/galeria-9.webp",
+          "/assets-images/proyectos/michis-aborteros/galeria-10.webp",
+          "/assets-images/proyectos/michis-aborteros/galeria-11.webp",
+          "/assets-images/proyectos/michis-aborteros/galeria-12.webp",
+          "/assets-images/proyectos/michis-aborteros/galeria-13.webp",
+          "/assets-images/proyectos/michis-aborteros/galeria-14.webp",
+          "/assets-images/proyectos/michis-aborteros/galeria-15.webp",
+          "/assets-images/proyectos/michis-aborteros/galeria-16.webp",
+          "/assets-images/proyectos/michis-aborteros/galeria-17.webp"
+        ]
       },
       "vistaGaleria": "carrusel",
       "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados"
