@@ -561,6 +561,136 @@
       },
       "vistaGaleria": "carrusel",
       "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados"
+    },
+    {
+      "slug": "poemujeria",
+      "nombre": "Poemujeria",
+      "tagline": "poesía, mujeres, periferia",
+      "tema": "Poesía y escritura de mujeres",
+      "estado": "diseño",
+      "resumen": "Se tradujeron las metodologías del Laboratorio en un flujo de trabajo híbrido: se diseñó un taller de poesía complementado con el desarrollo de la plataforma web de Poemujería y una estrategia en redes sociales centrada en la curaduría visual y la creación de comunidad. Así cada participante no solo escribe y documenta, sino que encuentra en nuestro sitio un directorio y una revista digital para publicar, hacer circular su obra y construir su portafolio artístico.",
+      "pasoPorVyA": "Habitar Voces y Agentes significó trazar un plano de cimentación para que la escritura y la gestión digital de las autoras de la periferia dejaran de ser gestos aislados. Lo más valioso fue aprender a nombrar procesos con rigor formal articulando el trabajo territorial con una infraestructura digital que sostiene y profesionaliza la obra de jóvenes escritoras.",
+      "liderazgo": "Consolidó la voz de Poemujeria transitando de la intuición a una gestión crítica, técnica y comunicacional. Fortaleció el liderazgo articulando la tecnología con la creación literaria, demostrando que la autogestión de un medio digital en Ecatepec es una toma de postura política para democratizar el acceso a la cultura.",
+      "alcance": "Se alcanzó a más de 80 jóvenes (18 a 29 años) mediante la convocatoria Territorio y palabra (19 postulantes), 5 poetas seleccionadas para publicación, 1 sesión de tallereo y 60 asistentes a la presentación editorial y micrófono abierto previo \"Curarse de Espanto\". Garantizamos el pago a 3 creadoras y logramos 171,035 visualizaciones en Instagram con 18,858 interacciones. Aseguramos la sostenibilidad del proyecto con 4 años de hosting/dominio web para Poemujería, implementamos un modelo autogestivo además de alianzas para impartir nuevos talleres.",
+      "resultados": "Trascendimos el \"dar voz\" para crear las condiciones reales en que las propias mujeres producen, gestionan, curan y deciden sobre sus espacios de circulación.",
+      "cifras": [
+        {
+          "valor": "80+",
+          "label": "jóvenes de 18 a 29 años alcanzadas"
+        },
+        {
+          "valor": "19",
+          "label": "postulaciones a la convocatoria Territorio y palabra"
+        },
+        {
+          "valor": "5",
+          "label": "poetas seleccionadas para publicación"
+        },
+        {
+          "valor": "60",
+          "label": "asistentes a la presentación editorial y al micrófono abierto"
+        },
+        {
+          "valor": "171k",
+          "label": "visualizaciones en Instagram"
+        },
+        {
+          "valor": "18.9k",
+          "label": "interacciones en Instagram"
+        },
+        {
+          "valor": "3",
+          "label": "creadoras con pago garantizado"
+        }
+      ],
+      "testimonio": {
+        "texto": "En la periferia no solo escribimos poesía: creamos las condiciones para gestionarla, publicarla y transformarla en archivo vivo de nuestro territorio.",
+        "autor": "Poemujeria"
+      },
+      "consejo": "No le pidan permiso a ningún canon para nombrar su realidad. Habiten y disfruten Voces y Agentes: hagan amigas y tejan alianzas en el camino, porque su voz ya es un documento histórico e indispensable que merece ser respaldado y valorado, <3.",
+      "territorios": [
+        "Ecatepec"
+      ],
+      "redes": [
+        {
+          "tipo": "web",
+          "url": "https://www.poemujeria.com"
+        },
+        {
+          "tipo": "instagram",
+          "url": "https://www.instagram.com/poemujeria"
+        }
+      ],
+      "vistaGaleria": "carrusel",
+      "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados"
+    },
+    {
+      "slug": "jamaica-y-maiz",
+      "nombre": "Jamaica y Maíz",
+      "tagline": "Tinta Periférica: Narrativas desde la Resistencia",
+      "tema": "Identidad indígena y afrodescendiente",
+      "estado": "en-marcha",
+      "resumen": "Jamaica y Maíz trabaja con juventudes indígenas y afrodescendientes. Con Tinta Periférica: Narrativas desde la Resistencia (TPNR), proyecto seleccionado para el fondo Semilla, la colectiva convirtió en arte una problemática que comparten sus integrantes. Hasta ahora llevan 8 talleres y alcanzaron a 18 jóvenes de Iztapalapa, Ecatepec, Cuauhtémoc, Chalco y Tlalpan.",
+      "pasoPorVyA": "La emoción empezó con la selección para Voces y Agentes y siguió con la del fondo Semilla. El proyecto le dio rumbo y sentido al colectivo. Conocer en persona a quienes integran TPNR fue increíble, y cada gestión externa, como buscar nuevas personas que quisieran sumarse, les dejó una lección nueva.\n\nDel laboratorio se llevaron el valor para pedir ayuda y la certeza de que mucha gente trabaja por dejar un mundo mejor. A ellas les apasiona sembrar conciencia y amor en las juventudes indígenas y afrodescendientes, y mostrarles que tienen una red de apoyo: la identidad se habita en compañía y con gozo.",
+      "adaptacion": "Del laboratorio aprovecharon más dos temas: la fiscalización y la comunicación en redes sociales. También contaron con Voces y Agentes para resolver cada duda.",
+      "liderazgo": "Ganaron método para desarrollar sus actividades, y más integrantes del equipo se hicieron cargo de tareas y situaciones y tomaron el liderazgo.",
+      "resultados": "Muchas personas se unieron al colectivo o mostraron interés en sumarse, y participaron en actividades adicionales para difundir TPNR en otros espacios.",
+      "cifras": [
+        {
+          "valor": "18",
+          "label": "jóvenes de 18 a 29 años alcanzadas"
+        },
+        {
+          "valor": "8",
+          "label": "talleres completados"
+        },
+        {
+          "valor": "1",
+          "label": "libro digital"
+        },
+        {
+          "valor": "1",
+          "label": "evento de recaudación de fondos"
+        },
+        {
+          "valor": "1",
+          "label": "evento de presentación de resultados"
+        }
+      ],
+      "testimonio": {
+        "texto": "Me sentí segura de saber que estaba compartiendo y creando con más personas que se han sentido alguna vez como yo.",
+        "autor": "Participante de TPNR"
+      },
+      "consejo": "Lo más importante para generar cambio son las redes de apoyo y la colectividad.",
+      "territorios": [
+        "Iztapalapa",
+        "Ecatepec",
+        "Cuauhtémoc",
+        "Chalco",
+        "Tlalpan"
+      ],
+      "redes": [
+        {
+          "tipo": "instagram",
+          "url": "https://www.instagram.com/jamaica_maiz"
+        },
+        {
+          "tipo": "tiktok",
+          "url": "https://www.tiktok.com/@jamaica_maiz"
+        }
+      ],
+      "media": {
+        "logo": "/assets-images/proyectos/jamaica-y-maiz/logo.png",
+        "galeria": [
+          "/assets-images/proyectos/jamaica-y-maiz/galeria-1.webp",
+          "/assets-images/proyectos/jamaica-y-maiz/galeria-2.webp",
+          "/assets-images/proyectos/jamaica-y-maiz/galeria-3.webp",
+          "/assets-images/proyectos/jamaica-y-maiz/galeria-4.webp",
+          "/assets-images/proyectos/jamaica-y-maiz/galeria-5.webp"
+        ]
+      },
+      "vistaGaleria": "carrusel",
+      "fuente": "Ficha de registro Voces y Agentes — Proyectos seleccionados"
     }
   ]
 }
