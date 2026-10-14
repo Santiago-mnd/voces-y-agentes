@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 import { PostHogProvider } from '@posthog/react'
@@ -19,10 +19,23 @@ if (redirectTarget) {
   }
 }
 
-createRoot(document.getElementById('root')!).render(
+const normalizePath = (pathname: string) => (pathname.length > 1 ? pathname.replace(/\/+$/, '') : pathname)
+
+const rootElement = document.getElementById('root')!
+const app = (
   <StrictMode>
     <PostHogProvider apiKey={import.meta.env.VITE_PUBLIC_POSTHOG_KEY} options={options}>
       <App />
     </PostHogProvider>
   </StrictMode>
 )
+
+const matchesPrerender =
+  rootElement.hasChildNodes() &&
+  rootElement.dataset.prerenderedPath === normalizePath(window.location.pathname)
+
+if (matchesPrerender) {
+  hydrateRoot(rootElement, app)
+} else {
+  createRoot(rootElement).render(app)
+}

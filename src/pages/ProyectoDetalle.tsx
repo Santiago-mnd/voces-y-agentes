@@ -3,7 +3,7 @@ import { useParams } from 'react-router';
 import { Link } from 'react-router';
 import { SectionWrapper } from '../components/ui/SectionWrapper';
 import { ProyectoGallery, ProyectoCarrusel } from '../components/ui/Gallery';
-import { setPageMeta } from '../lib/meta';
+import { getPageMeta, setPageMeta } from '../lib/meta';
 import { proyectos, getProyecto, testimoniosDe, ESTADO_LABEL, iniciales } from '../data/proyectos';
 
 const RED_LABEL: Record<string, string> = {
@@ -40,23 +40,8 @@ export function ProyectoDetalle() {
   const p = getProyecto(slug ?? '');
 
   useEffect(() => {
-    if (p) {
-      setPageMeta({
-        title: `${p.nombre} — Proyectos | Voces y Agentes`,
-        description: p.tagline
-          ? `${p.tagline}. ${p.resumen.slice(0, 120)}...`
-          : p.resumen.slice(0, 160),
-        path: `/proyectos/${p.slug}`,
-        image: p.media?.logo ? `${'https://vocesyagentes.goynmexico.org'}${p.media.logo}` : undefined,
-      });
-    } else {
-      setPageMeta({
-        title: 'Proyecto no encontrado | Voces y Agentes',
-        description: 'La página que buscas no existe o cambió de dirección.',
-        path: '/proyectos',
-      });
-    }
-  }, [p]);
+    setPageMeta(getPageMeta(`/proyectos/${slug ?? ''}`));
+  }, [slug]);
 
   if (!p) {
     return (

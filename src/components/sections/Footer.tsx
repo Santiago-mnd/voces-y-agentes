@@ -59,7 +59,7 @@ export function Footer() {
 
       {/* Footer */}
       <footer className="bg-secondary py-8 text-center text-surface font-body border-t-4 border-accent space-y-2">
-        <p className="text-surface">&copy; {new Date().getFullYear()} Voces y Agentes.</p>
+        <p className="text-surface">&copy; <span suppressHydrationWarning>{new Date().getFullYear()}</span> Voces y Agentes.</p>
         <p className="text-sm text-surface">
           Este micrositio alojado en goynmexico.org se apega al{' '}
           <a

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { SectionWrapper } from '../components/ui/SectionWrapper';
-import { setPageMeta } from '../lib/meta';
+import { getPageMeta, setPageMeta } from '../lib/meta';
 
 const liderazgo = [
   {
@@ -109,11 +109,7 @@ const fechasClave = [
 
 export function NuestrosAntecedentes() {
   useEffect(() => {
-    setPageMeta({
-      title: 'Nuestros Antecedentes | Voces y Agentes',
-      description: 'El origen de Voces y Agentes: el Programa de Liderazgo para la Equidad (ELP) y el Youth Innovation Fund (YIF) que lo hacen posible.',
-      path: '/nuestros-antecedentes',
-    });
+    setPageMeta(getPageMeta('/nuestros-antecedentes'));
     window.scrollTo(0, 0);
   }, []);
 

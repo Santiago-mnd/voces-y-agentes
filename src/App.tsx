@@ -8,9 +8,9 @@ import { NotFound } from './pages/NotFound';
 import { Proyectos } from './pages/Proyectos';
 import { ProyectoDetalle } from './pages/ProyectoDetalle';
 
-function App() {
+export function AppShell() {
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col font-body relative overflow-x-clip">
         <a
@@ -31,6 +31,14 @@ function App() {
         </main>
         <Footer />
       </div>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppShell />
     </BrowserRouter>
   );
 }
