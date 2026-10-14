@@ -13,8 +13,8 @@ React 19 &bull; TypeScript &bull; Tailwind CSS 4 &bull; Vite &bull; GitHub Pages
 ## Desarrollo local
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```
 
 El servidor de desarrollo se levanta en `http://localhost:5173`.
