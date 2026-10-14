@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Valida src/data/proyectos.json antes de cada build (npm run prebuild).
+// Valida src/data/proyectos.json antes de cada build (pnpm run prebuild).
 // Un proyecto inválido rompe el build a propósito: mejor truena aquí que publicar una ficha rota.
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
