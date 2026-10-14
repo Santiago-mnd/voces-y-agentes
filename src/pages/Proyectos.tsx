@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Link } from 'react-router';
 import { SectionWrapper } from '../components/ui/SectionWrapper';
-import { setPageMeta } from '../lib/meta';
+import { SITE, getPageMeta, setPageMeta } from '../lib/meta';
 import { proyectos, proyectosInverso, ESTADO_LABEL, iniciales } from '../data/proyectos';
 
 const MONO_BG = ['bg-primary-soft', 'bg-accent', 'bg-success', 'bg-secondary'];
@@ -64,11 +64,7 @@ export function Proyectos() {
   const gridRef = useFlipReorder(orden);
 
   useEffect(() => {
-    setPageMeta({
-      title: 'Proyectos seleccionados | Voces y Agentes',
-      description: 'Las colectivas juveniles nacidas y acompañadas dentro del laboratorio Voces y Agentes: qué hicieron, qué aprendieron y su impacto en Iztapalapa, Cuauhtémoc y Ecatepec.',
-      path: '/proyectos',
-    });
+    setPageMeta(getPageMeta('/proyectos'));
   }, []);
 
   const itemListLd = {
@@ -79,7 +75,7 @@ export function Proyectos() {
       '@type': 'ListItem',
       position: i + 1,
       name: p.nombre,
-      url: `https://vocesyagentes.goynmexico.org/proyectos/${p.slug}`,
+      url: `${SITE}/proyectos/${p.slug}`,
     })),
   };
 
