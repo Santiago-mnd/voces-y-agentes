@@ -14,6 +14,7 @@ interface PageMeta {
 interface ServerModule {
   render: (url: string) => { html: string; meta: PageMeta }
   siteInfo: { url: string; ogImage: string }
+  canonicalUrl: (path: string) => string
 }
 
 interface ProyectosData {
@@ -73,8 +74,7 @@ function setTagAttribute(
   return html.replace(tag, () => updated)
 }
 
-function applyMeta(template: string, meta: PageMeta, site: string, ogImage: string): string {
-  const url = `${site}${meta.path}`
+function applyMeta(template: string, meta: PageMeta, url: string, ogImage: string): string {
   const image = meta.image ?? ogImage
   let html = template
 
@@ -115,7 +115,7 @@ async function main(): Promise<void> {
   ]
 
   const template = readFileSync(join(distDir, 'index.html'), 'utf8')
-  const { render, siteInfo } = (await import(pathToFileURL(serverEntry).href)) as ServerModule
+  const { render, siteInfo, canonicalUrl } = (await import(pathToFileURL(serverEntry).href)) as ServerModule
 
   const pages = routes.map((route) => {
     const { html, meta } = render(route)
@@ -125,7 +125,7 @@ async function main(): Promise<void> {
     if (meta.path !== route) {
       throw new Error(`La meta de ${route} apunta a ${meta.path}`)
     }
-    return { route, file: outputFile(route), content: injectRoot(applyMeta(template, meta, siteInfo.url, siteInfo.ogImage), html, route) }
+    return { route, file: outputFile(route), content: injectRoot(applyMeta(template, meta, canonicalUrl(meta.path), siteInfo.ogImage), html, route) }
   })
 
   for (const { route, file, content } of pages) {

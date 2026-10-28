@@ -5,6 +5,10 @@
 import { getProyecto } from '../data/proyectos';
 
 export const SITE = 'https://vocesyagentes.goynmexico.org';
+export function canonicalUrl(path: string): string {
+  return path === '/' ? `${SITE}/` : `${SITE}${path}/`;
+}
+
 export const OG_IMAGE = 'https://res.cloudinary.com/ddt0pn1m1/image/upload/v1774118767/VOCES_Y_AGENTES_20260321_122520_0000_wlyzvw.png';
 
 function setMeta(attr: 'name' | 'property', key: string, content: string) {
@@ -39,14 +43,14 @@ export function setPageMeta({ title, description, path, image }: PageMeta) {
   setMeta('name', 'description', description);
   setMeta('property', 'og:title', title);
   setMeta('property', 'og:description', description);
-  setMeta('property', 'og:url', `${SITE}${path}`);
+  setMeta('property', 'og:url', canonicalUrl(path));
   setMeta('property', 'og:image', image ?? OG_IMAGE);
   setMeta('property', 'og:type', 'website');
   setMeta('name', 'twitter:card', 'summary_large_image');
   setMeta('name', 'twitter:title', title);
   setMeta('name', 'twitter:description', description);
   setMeta('name', 'twitter:image', image ?? OG_IMAGE);
-  setLink('canonical', `${SITE}${path}`);
+  setLink('canonical', canonicalUrl(path));
 }
 
 const HOME_META: PageMeta = {

@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Link } from 'react-router';
 import { SectionWrapper } from '../components/ui/SectionWrapper';
-import { SITE, getPageMeta, setPageMeta } from '../lib/meta';
+import { canonicalUrl, getPageMeta, setPageMeta } from '../lib/meta';
 import { proyectos, proyectosInverso, ESTADO_LABEL, iniciales } from '../data/proyectos';
 
 const MONO_BG = ['bg-primary-soft', 'bg-accent', 'bg-success', 'bg-secondary'];
@@ -75,7 +75,7 @@ export function Proyectos() {
       '@type': 'ListItem',
       position: i + 1,
       name: p.nombre,
-      url: `${SITE}/proyectos/${p.slug}`,
+      url: canonicalUrl(`/proyectos/${p.slug}`),
     })),
   };
 
